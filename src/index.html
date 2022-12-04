@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/img/masarak_logo.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/img/masarak_logo.png">
+    <link id="csslink" rel="stylesheet" href="css/styles.css">
+    <title>Masarak</title>
+</head>
+<body>
+    <main id="app">
+    </main>
+    <script>
+        window.GlobalVariables =
+        {
+            API_URL: 'https://localhost:5001',
+            ALERT_STATUS: 'success',
+            ALERT_MESSAGE: 'Hello World!',
+            CSS_FILE_NAME: document.querySelector("#csslink").href.substring(document.querySelector("#csslink").href.lastIndexOf('/')+1),
+            IMG_PATH: 'assets/img',
+            ICONS_PATH: ''
+        };
+    </script>
+    <script type="module" src="js/index.js"></script>
+</body>
+</html>

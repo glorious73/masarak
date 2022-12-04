@@ -1,0 +1,102 @@
+@import 'navbar.css';
+@import 'sidebar.css';
+@import 'buttons.css';
+@import 'footer.css';
+@import 'accordion.css';
+@import 'table.css';
+@import 'select.css';
+@import 'card.css';
+@import 'form.css';
+@import 'image.css';
+@import 'icon.css';
+@import 'modal.css';
+@import 'notification.css';
+@import 'animation.css';
+@import 'dropdown.css';
+@import 'auth.css';
+@import 'dashboard.css';
+@import 'customer.css';
+@import 'engagement.css';
+@import 'comment.css';
+@import 'plan.css';
+@import 'client.css';
+@import 'search.css';
+@import 'chart.css';
+@import 'scrollbar.css';
+@import 'pagination.css';
+@import 'filter.css';
+@import 'utils.css';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #ffffff;
+    --accent-color: #f2f2f2;
+    --secondary-color: #5f7cb3;
+    --active-color: #0f1c2f;
+    --hover-color: #c8c8c8;
+    --greyed-out-color: #ddd;
+    --text-color: #000;
+    --grey-color: #888;
+    --disabled-color: #666;
+    --error-color: #ff4d00;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Noto Kufi Arabic', Helvetica, sans-serif;
+}
+
+.body-container {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    flex: 76%;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.router-view {
+    flex-grow: 1;
+    background-color: var(--accent-color);
+    padding: 1rem 1rem 0 1rem;
+}
+
+.login-background {
+    background-color: var(--accent-color);
+}
+
+@media screen and (max-width: 768px) {
+    .body-container {
+        min-height: 100vh;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        flex: 100%;
+        background-color: var(--primary-color);
+        color: var(--text-color);
+    }
+    .router-view {
+        flex-grow: 1;
+        background-color: var(--accent-color);
+        padding: 1rem 0;
+    }
+}

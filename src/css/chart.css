@@ -1,0 +1,49 @@
+.chart-title {
+    width: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-weight: bold;
+    text-align: center;
+}
+
+#lineChartCanvas {
+    display: block !important;
+    box-sizing: border-box !important;
+    height: auto !important;
+    width: 95% !important;
+    margin: auto !important;
+}
+
+#pieChartCanvas {
+    display: block !important;
+    box-sizing: border-box !important;
+    height: auto !important;
+    width: 85% !important;
+    margin: auto !important;
+}
+
+/* Tablet */
+@media screen and (max-width: 768px)  {
+    #lineChartCanvas {
+        height: auto !important;
+        width: 90% !important;
+    }
+    #pieChartCanvas {
+        height: auto !important;
+        width: 90% !important;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 576px)  {
+    #lineChartCanvas {
+        height: auto !important;
+        width: 80% !important;
+    }
+    #pieChartCanvas {
+        height: auto !important;
+        width: 80% !important;
+    }
+}

@@ -1,0 +1,50 @@
+.client-contract {
+    width: 50vw; 
+    height: 60vh; 
+    margin:auto;
+}
+
+.client-contract-img {
+    width: 50vw; 
+    height: auto; 
+    margin:auto;
+}
+
+@media screen and (max-width: 1024px) {
+    .client-contract {
+        width: 40vw; 
+        height: 60vh; 
+        margin:auto;
+    }
+    .client-contract-img {
+        width: 40vw; 
+        height: auto; 
+        margin:auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .client-contract {
+        width: 80vw; 
+        height: 60vh; 
+        margin:auto;
+    }
+    .client-contract-img {
+        width: 80vw; 
+        height: auto; 
+        margin:auto;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .client-contract {
+        width: 65vw; 
+        height: 80vh; 
+        margin:auto;
+    }
+    .client-contract-img {
+        width: 65vw; 
+        height: auto; 
+        margin:auto;
+    }
+}

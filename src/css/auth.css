@@ -1,0 +1,7 @@
+.auth-link {
+    color: var(--secondary-color);
+}
+.auth-link:hover {
+  color: var(--active-color);
+  cursor: pointer;
+}

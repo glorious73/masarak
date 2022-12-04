@@ -1,0 +1,98 @@
+/*-- Form --*/
+.form-search {
+    display: inline;
+}
+.form-search:focus {
+    outline: none;
+}
+.form-search-accent {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+.form-search-primary {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+/*-- /Form --*/
+/*-- Wrapper --*/
+.search-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    width: 100%;
+}
+.search-wrapper-border {
+    border-radius: 1rem;
+}
+.search-wrapper-accent {
+    background-color: var(--accent-color);
+    color: var(--disabled-color);
+    border: 1px solid var(--accent-color);
+}
+.search-wrapper-primary {
+    background-color: var(--primary-color);
+    color: var(--disabled-color);
+    border: 1px solid var(--primary-color);
+}
+/*-- /Wrapper --*/
+
+/*-- Search --*/
+.input-text-search {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 0.95rem !important;
+    width: 80%;
+}
+.input-text-search:focus {
+    background-color: transparent;
+    color: var(--text-color);
+}
+.input-text-search::placeholder {
+    font-size: 0.95rem !important;
+    color: var(--disabled-color) !important;
+    font-style: italic !important;
+}
+
+.btn-search {
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: none;
+    outline: none;
+    width: 20%;
+}
+.btn-search:hover {
+    cursor: pointer;
+}
+/*-- /Search --*/
+
+/*-- Search label --*/
+.input-text-search-label {
+    background-color: var(--accent-color);
+    color: var(--disabled-color);
+    border: 1px solid var(--accent-color);
+    box-sizing: border-box;
+    padding: 0.7rem 0 0.7rem 0.5rem;
+    width: 100%;
+    
+    font-size: 0.95rem !important;
+}
+.input-text-search-label-border {
+    border-radius: 1rem;
+}
+.input-text-search-label:focus {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border-color: var(--accent-color);
+    outline: none;
+}
+.input-text-search-label::placeholder {
+    font-style: italic;
+}
+.input-text-search-label::-webkit-input-placeholder {
+    font-style: italic;
+}
+/*-- /Search label --*/

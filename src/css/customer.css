@@ -1,0 +1,131 @@
+/* Form */
+.customer-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-around;
+    align-items: center;
+    width: 94% !important;
+    margin: 0 3rem 2rem 3rem;
+}
+
+.customer-form-field {
+    flex: 0 1 47%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.customer-form-separator {
+    flex: 0 1 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.customer-field-label {
+    min-width: 5.5rem !important;
+    width: 5.5rem !important;
+    max-width: 5.5rem !important;
+    text-align: right;
+}
+/* /Form */
+
+/* Text Area */
+.customer-text-areas {
+    width: 94% !important;
+    margin: 0 3rem 2rem 3rem;
+}
+/* /Text Area*/
+
+/* Search */
+.customer-search-container {
+    display: none;
+}
+
+.customer-search {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.customer-search-element {
+    flex: 1 0 21%;
+}
+/* /Search*/
+
+@media screen and (max-width: 1024px) {
+    .customer-form {
+        gap: 2rem 1.5rem;
+        justify-content: center;
+        align-items: center;
+        width: 100% !important;
+        margin: 0;
+    }
+    .customer-form-field {
+        flex: 0 1 47%;
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        align-items: flex-start;
+        gap: 0.1rem;
+    }
+    .customer-field-label {
+        min-width: 10rem !important;
+        width: 10rem !important;
+        max-width: 10rem !important;
+        text-align: left;
+    }
+    .customer-text-areas {
+        width: 100% !important;
+        margin: 0;
+    }
+    .customer-search-container {
+        display: block;
+    }
+    .customer-search {
+        justify-content: space-around;
+        padding: 0 0.5rem;
+    }
+    .customer-search-element {
+        flex: 0 1 29%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .customer-form {
+        gap: 2rem 0;
+        justify-content: center;
+        align-items: center;
+        width: 100% !important;
+        margin: 0;
+    }
+    .customer-form-field {
+        flex: 0 1 90%;    
+    }
+    .customer-field-label {
+        min-width: 50vw !important;
+        width: 50vw !important;
+        max-width: 50vw !important;
+    }
+    .customer-form-separator {
+        display: none;
+    }
+    .customer-text-areas {
+        width: 100% !important;
+        margin: 0;
+    }
+    .customer-search {
+        width: 100%;
+        padding-left: 1.2rem !important;
+        padding-right: 1.2rem !important;
+    }
+    .customer-search-element {
+        flex: 1 0 90%;
+        width: 80% !important;
+    }
+}

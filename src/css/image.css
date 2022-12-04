@@ -1,0 +1,27 @@
+.img-login {
+    margin: auto;
+    width: auto;
+    height: 10rem;
+    display: block;
+    padding: 2rem;
+}
+
+.img-sidebar {
+    width: auto;
+    height: 6rem;
+    display: block;
+    padding: 0.7rem;
+}
+
+@media screen and (max-width: 768px) {
+    .img-login {
+        margin: auto;
+        width: 80vw;
+        height: auto;
+        display: block;
+        padding: 2rem;
+    }
+    .img-sidebar {
+        /* will deal later */
+    }
+}

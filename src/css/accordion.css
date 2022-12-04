@@ -1,0 +1,49 @@
+.accordion-menu {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+}
+.accordion-menu .item {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+.accordion-menu .item.active {
+    background-color: var(--hover-color);
+}
+.accordion-menu .item.active:hover {
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
+.accordion-menu .item:hover {
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
+
+.btn-accordion {
+    display: block;
+    position: relative; /* for the icon */
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 1.3rem 0 1.3rem 2rem !important;
+    width: 100%;
+    height: auto;
+    font-size: 1.2rem;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+.btn-accordion:hover {
+    background-color: var(--greyed-out-color);
+}
+.btn-accordion.active {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.accordion-content {
+    background-color: var(--primary-color);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}

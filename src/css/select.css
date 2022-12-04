@@ -1,0 +1,185 @@
+.select-dropdown {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+/* Select element */
+.select-element {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: center;
+    position: relative; /* for the icon */
+    padding: 0;
+    margin: 0;
+}
+.select-element input {
+    width: 94%;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+    margin: 0.4rem 0;
+    padding-left: 0.8rem;
+    -webkit-appearance: none;
+    outline: none;
+}
+.select-element:hover, .select-element:hover input {
+    cursor: pointer;
+}
+.select-element:focus, .select-element:focus input {
+    cursor: auto;
+}
+
+.btn-select {
+    border: none;
+}
+.btn-select:hover, .btn-select:focus {
+    outline: none;
+    cursor: pointer;
+}
+
+/* Border */
+.select-element-border {
+    border-radius: 1rem;
+}
+
+/* Primary theme */
+.select-element-primary {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
+.select-element-primary input {
+    color: var(--text-color);
+}
+.select-element-primary:hover,
+.select-element-primary:focus  {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
+.select-element-primary:hover input, 
+.select-element-primary:focus input {
+    background-color: transparent;
+}
+
+.btn-select-primary {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+.btn-select-primary:hover, .btn-select-primary:focus {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+/* Secondary theme */
+.select-element-secondary {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
+.select-element-secondary input {
+    color: var(--text-color);
+}
+.select-element-secondary:hover,
+.select-element-secondary:focus {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    color: var(--primary-color);
+}
+.select-element-secondary:hover input, 
+.select-element-secondary:focus input {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.btn-select-secondary {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+.btn-select-secondary:hover, .btn-select-secondary:focus {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* Accent theme */
+.select-element-accent {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: 1px solid var(--accent-color);
+}
+.select-element-accent input {
+    color: var(--text-color);
+}
+.select-element-accent:hover, 
+.select-element-accent:focus {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: 1px solid var(--accent-color);
+    cursor: pointer;
+}
+.select-element-accent:hover input, 
+.select-element-accent:focus input {
+    background-color: transparent;
+}
+
+.btn-select-accent {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+.btn-select-accent:hover, .btn-select-accent:focus {
+    background-color: var(--greyed-out-color);
+    color: var(--text-color);
+}
+
+/* Transparent theme */
+.select-element-transparent {
+    background-color: transparent;
+    color: var(--text-color);
+    border: none;
+}
+.select-element-transparent input {
+    color: var(--text-color);
+}
+.select-element-transparent:hover, 
+.select-element-transparent:focus {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+}
+.select-element-transparent:hover input, 
+.select-element-transparent:focus input {
+    background-color: transparent;
+}
+
+.btn-select-transparent {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+.btn-select-transparent:hover, .btn-select-transparent:focus {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+/* Items */
+.select-items-wrapper {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    width: 100%;
+    z-index: 3;
+}
+.select-items-wrapper.show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
+}
+.select-items-wrapper.show button {
+    padding: 0.5rem 0;
+}

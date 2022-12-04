@@ -1,0 +1,237 @@
+.ui-table-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.ui-table-header-item {
+    flex-grow: 0;
+}
+.ui-table-header-actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.ui-table {
+    border-collapse: collapse;
+    margin: 2rem 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(0,0,0,0.2);
+}
+
+/*-- themes --*/
+/* primary */
+.ui-table.ui-table-primary {
+    border: 0.5px solid var(--text-color);
+    color: var(--text-color);
+}
+.ui-table.ui-table-primary thead tr {
+    font-weight: 700;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+.ui-table.ui-table-primary tbody tr {
+    background-color: var(--primary-color);
+    border: 0.2px solid var(--text-color);
+    color: var(--text-color);
+}
+.ui-table.ui-table-primary tbody tr:nth-child(odd) {
+    background-color: var(--accent-color);
+    border: 0.2px solid var(--text-color);
+    color: var(--text-color);
+}
+.ui-table.ui-table-primary tbody tr:hover {
+    color: var(--text-color);
+}
+.ui-table.ui-table-primary tbody tr:nth-child(odd):hover {
+    color: var(--text-color);
+}
+/* secondary */
+.ui-table.ui-table-secondary {
+    border: 0.5px solid var(--secondary-color);
+    color: var(--primary-color);
+}
+.ui-table.ui-table-secondary thead tr {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+.ui-table.ui-table-secondary tbody tr {
+    background-color: var(--primary-color);
+    border: 0.2px solid var(--secondary-color);
+    color: var(--text-color);
+}
+.ui-table.ui-table-secondary tbody tr:hover {
+    background-color: var(--accent-color);
+}
+/* accent */
+.ui-table.ui-table-accent {
+    border: 0.5px solid var(--accent-color);
+    color: var(--text-color);
+}
+.ui-table.ui-table-accent thead tr {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+.ui-table.ui-table-accent tbody tr {
+    background-color: var(--primary-color);
+    border: 0.2px solid var(--text-color);
+    color: var(--text-color);
+}
+.ui-table.ui-table-accent tbody tr:nth-child(odd) {
+    background-color: var(--accent-color);
+    border: 0.2px solid var(--text-color);
+    color: var(--text-color);
+}
+.ui-table.ui-table-accent tbody tr:hover {
+    color: var(--text-color);
+}
+.ui-table.ui-table-accent tbody tr:nth-child(odd):hover {
+    color: var(--text-color);
+}
+/*-- /themes --*/
+
+.ui-table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+    text-align: left;
+}
+
+.ui-table tbody tr {
+    padding: 0.35rem;
+}
+
+.ui-table th, .ui-table td {
+    padding: 0.625rem;
+    text-align: center;
+}
+
+.ui-table th {
+    font-size: 0.85rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+
+.ui-table-actions {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.ui-table-actions app-svg-icon {
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+}
+.ui-table-actions app-svg-icon:hover {
+    cursor: pointer;
+}
+
+.wrap-table-text {
+    max-width: 6rem !important;
+    overflow: auto;
+    white-space: normal !important; /* css-3 */
+    white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+    word-wrap: break-word !important; /* Internet Explorer 5.5+ */
+}
+
+/* No Data */
+.ui-table-no-data {
+    display: none;
+}
+.ui-table-no-data.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem 2rem 1rem;
+    text-align: center;
+}
+/* /No Data */
+
+@media screen and (max-width: 1024px) {
+    .ui-table.ui-table.ui-table-primary,
+    .ui-table.ui-table.ui-table-secondary,
+    .ui-table.ui-table.ui-table-accent {
+        border: 0;
+    }
+
+    .ui-table caption {
+        font-size: 1.3em;
+    }
+
+    .ui-table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    .ui-table tr {
+        border-bottom: 3px solid var(--secondary-color);
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .ui-table td {
+        border-bottom: 1px solid var(--secondary-color);
+        display: block;
+        font-size: 0.8rem;
+        text-align: right;
+    }
+
+    .ui-table td::before {
+        /* Assuimg headers are written in 'data-label' */
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .ui-table td:last-child {
+        border-bottom: 0;
+    }
+
+    .ui-table-actions {
+        padding: 0.3rem 0.3rem 0 0;
+    }
+    .ui-table-actions svg {
+        margin-left: 0.9rem;
+        margin-right: 0;
+    }
+
+    .wrap-table-text {
+        max-width: initial !important;
+        overflow: initial !important;
+        white-space: initial !important;
+        word-wrap: initial !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .ui-table-header {
+        row-gap: 1rem;
+        justify-content: center;
+        align-items: center; 
+    }
+    .ui-table-header-item {
+        flex: 1 0 90%;
+    }
+    .ui-table-header-actions {
+        justify-content: center;
+        row-gap: 1rem;   
+    }
+    .ui-table-header-actions a {
+        flex: 1 0 40%;
+        text-align: center;
+    }
+}

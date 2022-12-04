@@ -1,0 +1,36 @@
+{
+  "name": "masarak",
+  "version": "1.0.0",
+  "source": "src/index.html",
+  "browserslist": "> 1%, last 2 versions, not dead",
+  "description": "platform for high school students and grads",
+  "scripts": {
+    "dev": "parcel ",
+    "build": "rm -rf .parcel-cache && rm -rf dist && parcel build"
+  },
+  "staticFiles": {
+    "staticPath": "src/assets",
+    "staticOutPath": "assets"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glorious73/masarak.git"
+  },
+  "keywords": [
+    "masarak",
+    "techmeetup",
+    "hackathon",
+    "google",
+    "saudi"
+  ],
+  "author": "SaudiAmbitionCoders",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/glorious73/masarak/issues"
+  },
+  "homepage": "https://github.com/glorious73/masarak#readme",
+  "devDependencies": {
+    "parcel": "^2.8.0",
+    "parcel-reporter-static-files-copy": "^1.4.0"
+  }
+}

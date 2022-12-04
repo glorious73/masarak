@@ -1,0 +1,67 @@
+#toasters {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    position: fixed;
+    z-index: 2;
+    top: 10vh;
+    right: 30px;
+}
+
+#toaster {
+    visibility: hidden;
+    min-width: 10vw;
+    max-width: 40vw;
+    margin-left: -125px;
+    text-align: left;
+    border-radius: 2px;
+    padding: 18px 36px;
+    margin-top: 18px;
+    font-size: 1.2rem;
+    background-color: var(--primary-color);
+}
+
+#toaster.show {
+    visibility: visible;
+    -webkit-animation: toastfadein 0.5s;
+    animation: toastfadein 0.5s;
+}
+
+.toaster-border {
+    border: #f0f0f0 2px solid;
+}
+
+.toaster-btn-close {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.8rem;
+    border: none;
+    outline: none;
+}
+.toaster-btn-close:hover {
+    color: #ff4d00;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+    #toaster {
+        visibility: hidden;
+        max-width: 99vw;
+        margin: auto;
+        text-align: left;
+        word-wrap: break-word;
+        word-wrap: anywhere;
+        border-radius: 2px;
+        padding: 16px 10vw;
+        z-index: 3;
+        font-size: 17px;
+        background-color: #fff;
+    }
+    #toaster.show {
+        visibility: visible;
+        -webkit-animation: toastfadeinmobile 0.5s;
+        animation: toastfadeinmobile 0.5s;
+    }
+}

@@ -1,0 +1,109 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.card:hover {
+    box-shadow: 0 6px 10px 0 rgba(0,0,0,0.2);
+}
+.card-small-shadow {
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2) !important;
+}
+
+.card-primary {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.card-login {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: stretch;
+    margin: 10vh 3rem 10vh 3rem;
+}
+.card-login-logo {
+    flex-grow: 1;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+.card-login-title {
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+.card-login-form {
+    flex-grow: 4;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+.card-login-logo, .card-login-form {
+    padding: 7rem 5rem;
+}
+
+.card-animation {
+    animation: 0.5s ease-in-out 0s 1 fadeIn;
+    transition: 0.3s;
+}
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+    .card-login {
+        display: flex;
+        flex-direction: row;
+        justify-content: stretch;
+        align-items: stretch;
+        margin: 10vh 0.5rem !important;
+    }
+    .card-login-logo {
+        flex-grow: 1;
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+    }
+    .card-login-form {
+        flex-grow: 3;
+        background-color: var(--primary-color);
+        color: var(--text-color);
+    }
+    .card-login-logo {
+        padding: 2rem 1rem;
+    }
+    .card-login-form {
+        padding: 2rem 1rem;
+    }
+    .card-login-form * .form-row {
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .card-login {
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        align-items: stretch;
+        margin: 5vh 1rem 1vh 1rem !important;
+    }
+    .card-login-logo {
+        flex-grow: 1;
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+    }
+    .card-login-form {
+        flex-grow: 2;
+        background-color: var(--primary-color);
+        color: var(--text-color);
+    }
+    .card-login-logo {
+        padding: 3rem 1rem;
+    }
+    .card-login-form {
+        padding: 3rem 1rem;
+    }
+    .card-login-form * .form-row {
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+}

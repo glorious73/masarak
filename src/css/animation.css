@@ -1,0 +1,86 @@
+.fade-in {
+    animation: fadeIn ease 1s;
+    -webkit-animation: fadeIn ease 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes toastfadein {
+    from {
+        right: 0;
+        opacity: 0;
+    }
+    to {
+        right: 30px;
+        opacity: 1;
+    }
+}
+@-webkit-keyframes toastfadein {
+    from {
+        right: 0;
+        opacity: 0;
+    }
+
+    to {
+        right: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes toastfadeinmobile {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+
+    to {
+        top: 10vh;
+        opacity: 1;
+    }
+}
+@-webkit-keyframes toastfadeinmobile {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+
+    to {
+        top: 10vh;
+        opacity: 1;
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}

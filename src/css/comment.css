@@ -1,0 +1,36 @@
+.comments {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    padding: 1rem;
+}
+
+.comment-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    border-bottom: 1px solid var(--greyed-out-color);
+}
+
+.comment-item-header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.comment-added-by {
+    color: var(--text-color);
+    flex-grow: 0;
+    padding-left: 0.8rem;
+    padding-right: 1.2rem;
+}
+
+.comment-date {
+    color: var(--disabled-color);
+    flex-grow: 0;
+}
+
+.comment-item-body {
+    color: var(--text-color);
+    padding: 1rem 1rem 2rem 1rem;
+}
