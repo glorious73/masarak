@@ -1,0 +1,55 @@
+.bg-main {
+    position: relative;
+    background-color: var(--lightred);
+    /*background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url('img/claudio-schwarz-purzlbaum-unsplash.jpg');*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 93vh;
+    height: auto;
+    width: auto;
+    overflow-x: hidden;
+}
+.img-main {
+    width: auto;
+    height: 10rem;
+    margin: 0.5rem 1.2rem 1.5rem 1.2rem;
+}
+.word-wrap-landing {
+    word-wrap: break-word;
+    width: 60vw;
+}
+
+@media only screen and (max-width: 768px) { 
+    .bg-main {
+      height: auto;
+    }
+    .img-main {
+        width: auto;
+        height: 8rem;
+        margin: 0.5rem 1.2rem 1.5rem 1.2rem;
+    }
+    .word-wrap-landing {
+        word-wrap: break-word;
+        width: 60vw;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .title {
+        font-size: 8rem;
+        margin: auto;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    /* Images */
+    .img-main {
+      width: auto;
+      height: 10rem;
+      margin: 0.5rem 1.2rem 1.5rem 1.2rem;
+    }
+    /* /Images */
+    .word-wrap-landing {
+        word-wrap: break-word;
+        width: 80vw;
+    }
+}

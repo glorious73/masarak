@@ -1,26 +1,33 @@
 .hyperlink {
-    background-color: var(--element-color);
+    background-color: var(--secondary-color);
     color: var(--accent-color);
     border: 1px solid var(--element-color);
-    padding: 1.3rem;
-    font-size: 1.5rem;
+    border-radius: 1rem;
+    padding: 0.11rem 1.3rem !important;
+    font-size: 1.1rem;
     font-weight: 700 !important;
 }
-.hyperlink:hover {
+.hyperlink:hover, .hyperlink.active:hover {
     background-color: var(--hover-color);
     border-color: var(--hover-color);
+    color: var(--primary-color);
     cursor: pointer;
 }
 .hyperlink.active {
     background-color: var(--active-color);
     border: 1px solid var(--active-color);
-    color: var(--element-color);
+    color: var(--accent-color);
     font-weight: bold;
 }
-.hyperlink.active:hover {
-    background-color: var(--hover-color);
-    border-color: var(--hover-color);
-    cursor: pointer;
+.hyperlink.primary {
+    background-color: var(--primary-color);
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+.hyperlink.primary:hover {
+    border: 1px solid var(--active-color);
+    color: var(--active-color);
 }
 
 .btn-form {

@@ -26,6 +26,7 @@
 @import 'pagination.css';
 @import 'filter.css';
 @import 'utils.css';
+@import 'landing.css';
 
 * {
     padding: 0;
@@ -39,11 +40,11 @@ html {
 
 :root {
     --primary-color: #ffffff;
-    --accent-color: #f2f2f2;
-    --secondary-color: #5f7cb3;
-    --active-color: #0f1c2f;
-    --hover-color: #c8c8c8;
-    --greyed-out-color: #ddd;
+    --accent-color: #F5F5F5;
+    --secondary-color: #41BD82;
+    --active-color: #23574E;
+    --hover-color: #18848C;
+    --greyed-out-color: #9F8E7F;
     --text-color: #000;
     --grey-color: #888;
     --disabled-color: #666;

@@ -15,6 +15,7 @@ function markupTemplate() {
                 <div class="nav-header">
                     <div class="nav-title">
                         <img class="navbar-brand-img" src="assets/img/masarak_logo.png" alt="Logo" />
+                        مسارك
                     </div>
                 </div>
                 <div class="nav-btn">
@@ -25,15 +26,19 @@ function markupTemplate() {
                     </label>
                 </div>
                 <div class="nav-items">
-                    <a href="#">Home</a>
-                    <a href="#">Services</a>
-                    <a href="#">Contact</a>
+                    <a href="#">الصفحة الرئيسية</a>
+                    <a href="#">الأسئلة الشائعة</a>
+                    <a href="#">تواصل معنا</a>
                     <input type="checkbox" id="nav-dropdown">
-                    <label for="nav-dropdown">Admin+</label>
+                    <!--<label for="nav-dropdown">Admin+</label>
                     <ul class="nav-dropdown-list">
                         <li><a href="#">Dashbord</a></li>
                         <li><a href="#">Logout</a></li>
-                    </ul>
+                    </ul>-->
+                </div>
+                <div class="nav-registration">
+                    <a class="hyperlink active">التسجيل</a>
+                    <a class="hyperlink primary">تسجيل الدخول</a>
                 </div>
             </div>
         </header>
