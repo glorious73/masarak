@@ -9,7 +9,7 @@ template.innerHTML = /*html*/`
    ${window.GlobalVariables.styles}
     </style>
     <a class="btn-accordion">
-        <app-svg-icon id="accordionIcon" data-class="icon-accordion" data-icon="caret-down">
+        <app-svg-icon id="accordionIcon" data-class="icon-accordion" data-icon="caret-down" data-view-box="0 0 14 14">
         </app-svg-icon>
     </a>
     <div class="accordion-content">
@@ -24,7 +24,7 @@ export default class AccordionComponent extends HTMLElement {
         super();
         this.attachShadow({ mode: 'open' });
         const template = markupTemplate();
-this.shadowRoot.appendChild(template.content.cloneNode(true));
+        this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
 
     connectedCallback() {

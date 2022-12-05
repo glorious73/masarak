@@ -26,19 +26,14 @@ function markupTemplate() {
                     </label>
                 </div>
                 <div class="nav-items">
-                    <a href="#">الصفحة الرئيسية</a>
-                    <a href="#">الأسئلة الشائعة</a>
-                    <a href="#">تواصل معنا</a>
+                    <a href="">الصفحة الرئيسية</a>
+                    <a href="#/faqs">الأسئلة الشائعة</a>
+                    <a href="#/contactus">تواصل معنا</a>
                     <input type="checkbox" id="nav-dropdown">
-                    <!--<label for="nav-dropdown">Admin+</label>
-                    <ul class="nav-dropdown-list">
-                        <li><a href="#">Dashbord</a></li>
-                        <li><a href="#">Logout</a></li>
-                    </ul>-->
                 </div>
                 <div class="nav-registration">
-                    <a class="hyperlink active">التسجيل</a>
-                    <a class="hyperlink primary">تسجيل الدخول</a>
+                    <a href="#/signup" class="hyperlink active">التسجيل</a>
+                    <a href="#/login" class="hyperlink primary">تسجيل الدخول</a>
                 </div>
             </div>
         </header>

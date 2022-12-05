@@ -11,32 +11,32 @@ template.innerHTML = /*html*/`
     <style>
    ${window.GlobalVariables.styles}
     </style>
-    <div class="card card-primary card-animation card-login">
+    <div class="card-login" style="height: 100vh;">
         <div class="card-login-logo">
             <!--To change the image source-->
-            <img src="${window.GlobalVariables.IMG_PATH}/hawkamah_logo_white.png" class="img-login"/>
+            <img src="${window.GlobalVariables.IMG_PATH}/masarak_logo_white.png" class="img-login"/>
         </div>
         <div class="card-login-form">
-            <h1 class="card-login-title">Edama Tech</h2>
+            <h1 class="card-login-title">تسجيل الدخول</h2>
             <form action="" id="loginForm">
                 <div class="form-row">
-                    <label for="username">Username/Email address</label>
-                    <input type="text" class="input-text input-text-border" id="username" name="username">
+                    <label for="username">اسم المستخدم/البريد الالكتروني</label>
+                    <input type="text" class="input-text input-text-border" id="username" name="username" required>
                 </div>
                 <div class="form-row">
-                    <label for="password">Password</label>
-                    <input type="password" class="input-text input-text-border" id="password" name="password">
+                    <label for="password">كلمة المرور</label>
+                    <input type="password" class="input-text input-text-border" id="password" name="password" required>
                 </div>
                 <div class="form-row">
                     <button type="submit" class="btn-form btn-form-border btn-submit" id="btnSubmit">
-                        LOGIN  
+                        تسجيل الدخول  
                     </button>
                 </div>
             </form>
             <div class="mt-2 d-flex flex-row justify-content-center">
-                <a class="auth-link" href="#/password/forgot">Forgot Password?</a>
+                <a class="auth-link" href="#/password/forgot">نسيت كلمة السر؟</a>
             </div>
-        </div>  
+        </div>
     </div>
 `;
 return template;
@@ -47,7 +47,7 @@ export default class LoginComponent extends HTMLElement {
         super();
         this.attachShadow({ mode: 'open' });
         const template = markupTemplate();
-this.shadowRoot.appendChild(template.content.cloneNode(true));
+        this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
 
     connectedCallback() {

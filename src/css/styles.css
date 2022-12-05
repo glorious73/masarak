@@ -27,6 +27,7 @@
 @import 'filter.css';
 @import 'utils.css';
 @import 'landing.css';
+@import 'faqs.css';
 
 * {
     padding: 0;

@@ -8,11 +8,11 @@ template.innerHTML = /*html*/`
     </style>
     <div id="toaster" class="toaster-border">
         <div class="d-flex flex-row align-items-center text-success py-0 my-0">
-            <h4 class="flex-grow-0"></h4>
-            <h4 class="flex-grow-1" id="status"></h4>
             <h4 class="flex-grow-0">
                 <button class="toaster-btn-close">&times;</button>
             </h4>
+            <h4 class="flex-grow-0"></h4>
+            <h4 class="flex-grow-1" id="status"></h4>
         </div>
         <hr class="my-05" />
         <label id="message"></label>
@@ -26,7 +26,7 @@ export default class AlertComponent extends HTMLElement {
         super();
         this.attachShadow({ mode: 'open' });
         const template = markupTemplate();
-this.shadowRoot.appendChild(template.content.cloneNode(true));
+        this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
 
     connectedCallback() {

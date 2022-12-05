@@ -12,26 +12,26 @@ template.innerHTML = /*html*/`
     <style>
    ${window.GlobalVariables.styles}
     </style>
-    <div class="card card-primary card-animation card-login">
+    <div class="card-login" style="height: 100vh;">
         <div class="card-login-logo">
             <!--To change the image source-->
-            <img src="${window.GlobalVariables.IMG_PATH}/hawkamah_logo_white.png" class="img-login"/>
+            <img src="${window.GlobalVariables.IMG_PATH}/masarak_logo_white.png" class="img-login"/>
         </div>
         <div class="card-login-form">
-            <h1 class="card-login-title">Forgot Password?</h2>
+            <h1 class="card-login-title">نسيت كلمة السر؟</h2>
             <form action="" id="forgotPasswordForm">
                 <div class="form-row">
-                    <label for="email">Email address</label>
-                    <input type="email" class="input-text input-text-border" id="email" name="email">
+                    <label for="email">البريد الالكتروني</label>
+                    <input type="email" class="input-text input-text-border" id="email" name="email" required>
                 </div>
                 <div class="form-row">
                     <button type="submit" class="btn-form btn-form-border btn-submit" id="btnSubmit">
-                        SEND EMAIL
+                        ارسال بريد استعادة كلمة السر
                     </button>
                 </div>
             </form> 
             <div class="mt-2 d-flex flex-row justify-content-center">
-                <a class="auth-link" href="#/login">Login</a>
+                <a class="auth-link" href="#/login">تسجيل الدخول</a>
             </div>
         </div>  
     </div>
@@ -44,7 +44,7 @@ export default class ForgotPasswordComponent extends HTMLElement {
         super();
         this.attachShadow({ mode: 'open' });
         const template = markupTemplate();
-this.shadowRoot.appendChild(template.content.cloneNode(true));
+        this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
 
     connectedCallback() {
@@ -63,10 +63,9 @@ this.shadowRoot.appendChild(template.content.cloneNode(true));
 
     async sendResetPasswordEmail(e) {
         e.preventDefault();
-        const passwordService = new PasswordService();
         try {
-            const result = await passwordService.sendResetPasswordEmail(e.target);
-            this.alertService.showAlert("Information", result.message);
+            const result = await setTimeout(2000, () => console.log("emulate forgot password email."));
+            this.alertService.showAlert("اشعار", "تم ارسال بريد الكتروني لك.");
             setTimeout(() => window.location = Routes.Login.path, 1000);
         }
         catch(err) {

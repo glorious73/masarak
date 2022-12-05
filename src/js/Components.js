@@ -3,6 +3,7 @@ import RouterView from "./Views/RouterView";
 import LandingComponent from "./Component/Landing/LandingComponent";
 import AlertsComponent from "./Component/Alert/AlertsComponent";
 import AlertComponent from "./Component/Alert/AlertComponent";
+import SignupComponent from "./Component/Auth/SignupComponent";
 import LoginComponent from "./Component/Auth/LoginComponent";
 import ForgotPasswordComponent from "./Component/Auth/ForgotPasswordComponent";
 import ResetPasswordComponent from "./Component/Auth/ResetPasswordComponent";
@@ -26,6 +27,8 @@ import UserEditComponent from "./Component/User/UserEdit/UserEditComponent";
 import ProfileComponent from "./Component/User/Profile/ProfileComponent";
 import FeaturesComponent from "./Component/Features/FeaturesComponent";
 import OfferingsComponent from "./Component/Offerings/OfferingsComponent";
+import FaqsComponent from "./Component/Faqs/FaqsComponent";
+import ContactComponent from "./Component/Contact/ContactComponent";
 
 export default class Components {
     constructor() { }
@@ -36,6 +39,7 @@ export default class Components {
         window.customElements.define('app-landing', LandingComponent);
         window.customElements.define('app-alerts', AlertsComponent);
         window.customElements.define('app-alert', AlertComponent);
+        window.customElements.define('app-sign-up', SignupComponent);
         window.customElements.define('app-login', LoginComponent);
         window.customElements.define('app-reset-password', ResetPasswordComponent);
         window.customElements.define('app-forgot-password', ForgotPasswordComponent);
@@ -59,6 +63,8 @@ export default class Components {
         window.customElements.define('app-users', UsersComponent);
         window.customElements.define('app-features', FeaturesComponent);
         window.customElements.define('app-offerings', OfferingsComponent);
+        window.customElements.define('app-faqs', FaqsComponent);
+        window.customElements.define('app-contact', ContactComponent);
     }
 
     addComponents(app) {
@@ -67,12 +73,24 @@ export default class Components {
             view: LandingComponent
         });
         app.addComponent({
+            name: 'app-faqs',
+            view: FaqsComponent
+        });
+        app.addComponent({
+            name: 'app-contact',
+            view: ContactComponent
+        });
+        app.addComponent({
             name: 'app-alerts',
             view: AlertsComponent
         });
         app.addComponent({
             name: 'app-alert',
             view: AlertComponent
+        });
+        app.addComponent({
+            name: 'app-sign-up',
+            view: SignupComponent
         });
         app.addComponent({
             name: 'app-login',

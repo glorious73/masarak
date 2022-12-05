@@ -19,7 +19,8 @@
 }
 
 .btn-accordion {
-    display: block;
+    display: flex;
+    flex-direction: row;
     position: relative; /* for the icon */
     background-color: var(--accent-color);
     color: var(--text-color);
@@ -34,7 +35,8 @@
     transition: 0.4s;
 }
 .btn-accordion:hover {
-    background-color: var(--greyed-out-color);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
 .btn-accordion.active {
     background-color: var(--secondary-color);

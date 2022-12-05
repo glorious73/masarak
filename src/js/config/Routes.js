@@ -15,6 +15,11 @@ export const Routes =
         path: '#/login',
         pathRegex: '^#/login$'
     },
+    Signup: {
+        name: 'app-sign-up',
+        path: '#/signup',
+        pathRegex: '^#/signup$'
+    },
     ForgotPassword: {
         name: 'app-forgot-password',
         path: '#/password/forgot',
@@ -24,6 +29,16 @@ export const Routes =
         name: 'app-reset-password',
         path: '#/password/reset',
         pathRegex: '^#/password/reset(.*)$'
+    },
+    Faqs: {
+        name: 'app-faqs',
+        path: '#/faqs',
+        pathRegex: '^#/faqs$'
+    },
+    Contact: {
+        name: 'app-contact',
+        path: '#/contactus',
+        pathRegex: '^#/contactus$'
     },
     Dashboard: {
         name: 'app-dashboard',

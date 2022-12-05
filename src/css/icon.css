@@ -22,6 +22,16 @@
     fill: currentColor;
 }
 
+.icon-medium {
+    width: 1.8rem;
+    height: 1.8rem;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: currentColor;
+    vertical-align: -0.15rem;
+}
+
 .fill-active {
     stroke: var(--active-color);
     fill: var(--active-color);
@@ -94,9 +104,8 @@
 }
 
 .icon-select {
-    position: absolute;
-    top: 30%;
-    right: 4%;
+    margin-left: 1rem;
+    margin-right: 1rem;
     width: 0.9rem;
     height: 0.9rem;
     stroke: currentColor;
@@ -107,16 +116,14 @@
 }
 
 .icon-accordion {
-    position: absolute;
-    top: 35%;
-    right: 5%;
+    margin-left: 1rem;
+    margin-right: 1rem;
     width: 1rem;
     height: 1rem;
     stroke: var(--text-color);
     stroke-linecap: round;
     stroke-linejoin: round;
     fill: var(--text-color);
-    vertical-align: bottom;
 }
 
 .icon-action {

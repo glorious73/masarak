@@ -35,7 +35,7 @@ function markupTemplate() {
             </div>
         </div>
         <app-features></app-features>
-        <h1 style="padding-top: 1rem; margin: auto; text-align:center; background-color: var(--primary-color);">
+        <h1 style="padding-top: 1rem; margin: auto; text-align:center;">
         الأهداف
         </h1>
         <app-offerings></app-offerings>

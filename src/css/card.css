@@ -4,7 +4,7 @@
     border-radius: 1rem;
 }
 .card:hover {
-    box-shadow: 0 6px 10px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,0.2);
 }
 .card-small-shadow {
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2) !important;
@@ -26,7 +26,7 @@
     flex-direction: row;
     justify-content: stretch;
     align-items: stretch;
-    margin: 10vh 3rem 10vh 3rem;
+    margin: 0;
 }
 .card-login-logo {
     flex-grow: 1;
@@ -43,7 +43,7 @@
     color: var(--text-color);
 }
 .card-login-logo, .card-login-form {
-    padding: 7rem 5rem;
+    padding: 2rem 5rem 5rem 5rem;
 }
 
 .card-animation {
