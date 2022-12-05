@@ -100,6 +100,22 @@ a {
   margin-right: 2rem !important;
   margin-left: 2rem !important;
 }
+.mx-3 {
+  margin-right: 3rem !important;
+  margin-left: 3rem !important;
+}
+.mx-4 {
+  margin-right: 4rem !important;
+  margin-left: 4rem !important;
+}
+.mx-5 {
+  margin-right: 5rem !important;
+  margin-left: 5rem !important;
+}
+.mx-7 {
+  margin-right: 7rem !important;
+  margin-left: 7rem !important;
+}
 
 .m-1 {
   margin: 1rem;
@@ -135,7 +151,6 @@ a {
 .mt-4 {
   margin-top: 4rem;
 }
-
 .mt-10 {
   margin-top: 10rem;
 }

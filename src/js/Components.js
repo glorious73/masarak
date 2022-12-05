@@ -24,6 +24,8 @@ import UsersComponent from "./Component/User/Users/UsersComponent";
 import UserFormComponent from "./Component/User/UserForm/UserFormComponent";
 import UserEditComponent from "./Component/User/UserEdit/UserEditComponent";
 import ProfileComponent from "./Component/User/Profile/ProfileComponent";
+import FeaturesComponent from "./Component/Features/FeaturesComponent";
+import OfferingsComponent from "./Component/Offerings/OfferingsComponent";
 
 export default class Components {
     constructor() { }
@@ -55,6 +57,8 @@ export default class Components {
         window.customElements.define('app-user-edit', UserEditComponent);
         window.customElements.define('app-user-form', UserFormComponent);
         window.customElements.define('app-users', UsersComponent);
+        window.customElements.define('app-features', FeaturesComponent);
+        window.customElements.define('app-offerings', OfferingsComponent);
     }
 
     addComponents(app) {

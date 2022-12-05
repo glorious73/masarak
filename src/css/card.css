@@ -1,14 +1,19 @@
 .card {
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    border-radius: 5px;
+    border-radius: 1rem;
 }
 .card:hover {
     box-shadow: 0 6px 10px 0 rgba(0,0,0,0.2);
 }
 .card-small-shadow {
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2) !important;
+}
+.card-active-border {
+    border: 1px solid var(--active-color);
+}
+.card-secondary-border {
+    border: 1px solid var(--secondary-color);
 }
 
 .card-primary {

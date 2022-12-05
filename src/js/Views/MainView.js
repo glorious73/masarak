@@ -1,6 +1,7 @@
 import AuthService from "../Service/Auth/AuthService";
 import AlertsComponent from "../Component/Alert/AlertsComponent";
 import NavbarComponent from "../Component/UI/Navbar/NavbarComponent";
+import FooterComponent from "../Component/Footer/FooterComponent";
 import RouterView from "./RouterView";
 
 function markupTemplate() {
@@ -16,6 +17,7 @@ template.innerHTML = /*html*/`
         <div class="content">
             <app-navbar class="navbar"></app-navbar>
             <router-view class="router-view"></router-view>
+            <app-footer></app-footer>
         </div>
     </div>
 `;

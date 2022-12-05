@@ -1,15 +1,77 @@
-.bg-main {
+.bg-landing {
     position: relative;
-    background-color: var(--lightred);
-    /*background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url('img/claudio-schwarz-purzlbaum-unsplash.jpg');*/
+    background-color: var(--accent-color);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 93vh;
+    margin-bottom: 10vh;
+    margin-top: 10vh;
     height: auto;
     width: auto;
     overflow-x: hidden;
 }
+
+.title {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.main-statistic {
+    font-size: 2rem;
+}
+
+.number-statistic {
+    font-size: 1.5rem;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 5rem 0 3rem 0;
+    margin: -2.5rem auto 0 auto;
+    z-index: 1;
+}
+
+.features-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.word-wrap-features {
+    word-wrap: break-word;
+    width: 65%;
+    text-align: center;
+    margin: auto;
+}
+
+.offerings {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 3rem 5rem 3rem;
+    background-color: var(--primary-color);
+    border-bottom: var(--accent-color);
+}
+
+.offering {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+}
+.offering-text {
+    margin-top: 1rem; 
+    font-size: 1.2rem;
+    text-align: center;
+    word-wrap: break-word;
+    width: 15rem;
+}
+
 .img-main {
     width: auto;
     height: 10rem;
@@ -17,11 +79,11 @@
 }
 .word-wrap-landing {
     word-wrap: break-word;
-    width: 60vw;
+    width: 45vw;
 }
 
 @media only screen and (max-width: 768px) { 
-    .bg-main {
+    .bg-landing {
       height: auto;
     }
     .img-main {

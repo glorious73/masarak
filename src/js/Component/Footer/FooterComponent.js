@@ -8,8 +8,15 @@ template.innerHTML = /*html*/`
     <style>
    ${window.GlobalVariables.styles}
     </style>
-    <div class="d-flex flex-row justify-content-center align-items-center">
-        <h6 class="footer-text">&copy; <span id="thisYear"></span> <a class="footer-link" href="https://www.hawkamah.sa" target="_blank">Hawkamah</a></h6>
+    <div class="footer">
+        <img src="assets/img/masarak_logo.png" class="footer-img">
+        <h6 class="footer-text">
+            &copy; <span id="thisYear"></span>
+            <a class="footer-link" href="https://masarak.netlify.app" target="_blank">
+            مسارك - جميع الحقوق محفوظة
+            </a>
+        </h6>
+
     </div>
 `;
 return template;

@@ -25,9 +25,9 @@ this.shadowRoot.appendChild(template.content.cloneNode(true));
         this.icon     = this.getAttribute("data-icon");
         this.class    = this.getAttribute("data-class");
         this.viewBox  = this.getAttribute("data-view-box");
-        this.stroke   = this.getAttribute("data-stroke-color");
+        this.svgstyle = this.getAttribute("data-svg-style");
         const viewBox = (this.viewBox) ? `viewBox='${this.viewBox}'` : ''; 
-        const style   = (this.stroke) ? `style='stroke: ${this.stroke};'` : '';
+        const style   = (this.svgstyle) ? `style=' ${this.svgstyle}'` : '';
         this.shadowRoot.innerHTML += 
         `
         <svg id="iconSvg" class="${this.class}" ${viewBox} ${style}>
