@@ -13,9 +13,10 @@ import Components from './Components';
 
 class Index {
     constructor() {
-        this.app       = new App("#app");
-        this.router    = new Router(this.app);
-        this.uiService = new UIService();
+        this.app        = new App("#app");
+        this.router     = new Router(this.app);
+        this.components = new Components();
+        this.uiService  = new UIService();
     }
 
     start() {
@@ -40,7 +41,7 @@ class Index {
     async load() {
         await this.loadIcons();
         await this.loadCss();
-        new Components().defineComponents();
+        this.components.defineComponents();
         const user     = localStorage.getItem("user");
         const { hash } = window.location;
         if(!user) {
@@ -75,6 +76,9 @@ class Index {
             name: 'router-view',
             view: RouterView
         });
+        
+        // Others
+        this.components.addComponents(this.app);
     }
 
     addRoutes() {

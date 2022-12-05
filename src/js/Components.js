@@ -56,4 +56,103 @@ export default class Components {
         window.customElements.define('app-user-form', UserFormComponent);
         window.customElements.define('app-users', UsersComponent);
     }
+
+    addComponents(app) {
+        app.addComponent({
+            name: 'app-landing',
+            view: LandingComponent
+        });
+        app.addComponent({
+            name: 'app-alerts',
+            view: AlertsComponent
+        });
+        app.addComponent({
+            name: 'app-alert',
+            view: AlertComponent
+        });
+        app.addComponent({
+            name: 'app-login',
+            view: LoginComponent
+        });
+        app.addComponent({
+            name: 'app-reset-password',
+            view: ResetPasswordComponent
+        });
+        app.addComponent({
+            name: 'app-forgot-password',
+            view: ForgotPasswordComponent
+        });
+        app.addComponent({
+            name: 'app-dashboard',
+            view: DashboardComponent
+        });
+        app.addComponent({
+            name: 'app-delete-form',
+            view: DeleteFormComponent
+        });
+        app.addComponent({
+            name: 'app-footer',
+            view: FooterComponent
+        });
+        app.addComponent({
+            name: 'app-dashboard-card',
+            view: DashboardCardComponent
+        });
+        app.addComponent({
+            name: 'app-accordion',
+            view: AccordionComponent
+        });
+        app.addComponent({
+            name: 'app-file',
+            view: FileComponent
+        });
+        app.addComponent({
+            name: 'app-modal',
+            view: ModalComponent
+        });
+        app.addComponent({
+            name: 'app-navbar',
+            view: NavbarComponent
+        });
+        app.addComponent({
+            name: 'app-pagination',
+            view: PaginationComponent
+        });
+        app.addComponent({
+            name: 'app-search',
+            view: SearchComponent
+        });
+        app.addComponent({
+            name: 'app-select',
+            view: SelectComponent
+        });
+        app.addComponent({
+            name: 'app-svg-icon',
+            view: SvgIconComponent
+        });
+        app.addComponent({
+            name: 'app-table',
+            view: TableComponent
+        });
+        app.addComponent({
+            name: 'app-user-menu',
+            view: UserMenuComponent
+        });
+        app.addComponent({
+            name: 'app-user-profile',
+            view: ProfileComponent
+        });
+        app.addComponent({
+            name: 'app-user-edit',
+            view: UserEditComponent
+        });
+        app.addComponent({
+            name: 'app-user-form',
+            view: UserFormComponent
+        });
+        app.addComponent({
+            name: 'app-users',
+            view: UsersComponent
+        });
+    }
 }
