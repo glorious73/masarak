@@ -1,6 +1,8 @@
 
 
-const template = document.createElement('template');
+function markupTemplate() {
+    const template = document.createElement('template');
+
 
 template.innerHTML = /*html*/`
     <style>
@@ -14,12 +16,15 @@ template.innerHTML = /*html*/`
         <slot name="content"></slot>
     </div>
 `;
+return template;
+}
 
 export default class AccordionComponent extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
-        this.shadowRoot.appendChild(template.content.cloneNode(true));
+        const template = markupTemplate();
+this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
 
     connectedCallback() {
@@ -58,5 +63,3 @@ export default class AccordionComponent extends HTMLElement {
         accordionIcon.setAttribute('data-icon', icon);
     }
 }
-
-window.customElements.define('app-accordion', AccordionComponent);

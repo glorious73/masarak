@@ -1,7 +1,9 @@
 
 import ModalComponent from "../Modal/ModalComponent";
 
-const template = document.createElement('template');
+function markupTemplate() {
+    const template = document.createElement('template');
+
 
 template.innerHTML = /*html*/`
     <style>
@@ -19,12 +21,15 @@ template.innerHTML = /*html*/`
     </div>
     <app-modal class="app-modal"></app-modal>
 `;
+return template;
+}
 
 export default class TableComponent extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
-        this.shadowRoot.appendChild(template.content.cloneNode(true));
+        const template = markupTemplate();
+this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
 
     connectedCallback() {
@@ -179,5 +184,3 @@ export default class TableComponent extends HTMLElement {
         }));
     }
 }
-
-window.customElements.define('app-table', TableComponent);

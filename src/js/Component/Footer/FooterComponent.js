@@ -1,6 +1,8 @@
 
 
-const template = document.createElement('template');
+function markupTemplate() {
+    const template = document.createElement('template');
+
 
 template.innerHTML = /*html*/`
     <style>
@@ -10,12 +12,15 @@ template.innerHTML = /*html*/`
         <h6 class="footer-text">&copy; <span id="thisYear"></span> <a class="footer-link" href="https://www.hawkamah.sa" target="_blank">Hawkamah</a></h6>
     </div>
 `;
+return template;
+}
 
 export default class FooterComponent extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
-        this.shadowRoot.appendChild(template.content.cloneNode(true));
+        const template = markupTemplate();
+this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
 
     connectedCallback() {
@@ -27,5 +32,3 @@ export default class FooterComponent extends HTMLElement {
 
     }
 }
-
-window.customElements.define('app-footer', FooterComponent);

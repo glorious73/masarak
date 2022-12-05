@@ -1,6 +1,8 @@
 
 
-const template = document.createElement('template');
+function markupTemplate() {
+    const template = document.createElement('template');
+
 
 template.innerHTML = /*html*/`
     <style>
@@ -8,12 +10,15 @@ template.innerHTML = /*html*/`
     </style>
     
 `;
+return template;
+}
 
 export default class SvgIconComponent extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
-        this.shadowRoot.appendChild(template.content.cloneNode(true));
+        const template = markupTemplate();
+this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
 
     async connectedCallback() {
@@ -54,5 +59,3 @@ export default class SvgIconComponent extends HTMLElement {
             `;
     }
 }
-
-window.customElements.define('app-svg-icon', SvgIconComponent);

@@ -4,7 +4,9 @@ import PasswordService from "../../Service/Auth/PasswordService";
 import { Routes } from "../../config/Routes";
 import AlertService from "../../Service/Alert/AlertService";
 
-const template = document.createElement('template');
+function markupTemplate() {
+    const template = document.createElement('template');
+
 
 template.innerHTML = /*html*/`
     <style>
@@ -34,12 +36,15 @@ template.innerHTML = /*html*/`
         </div>  
     </div>
 `;
+return template;
+}
 
 export default class ForgotPasswordComponent extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
-        this.shadowRoot.appendChild(template.content.cloneNode(true));
+        const template = markupTemplate();
+this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
 
     connectedCallback() {
@@ -69,5 +74,3 @@ export default class ForgotPasswordComponent extends HTMLElement {
         }
     }
 }
-
-window.customElements.define('app-forgot-password', ForgotPasswordComponent);

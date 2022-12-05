@@ -2,7 +2,9 @@ import CRUDService from "../../../Service/CRUD/CRUDService";
 
 import AlertService from "../../../Service/Alert/AlertService";
 
-const template = document.createElement('template');
+function markupTemplate() {
+    const template = document.createElement('template');
+
 
 template.innerHTML = /*html*/`
     <style>
@@ -21,12 +23,15 @@ template.innerHTML = /*html*/`
         </li>
     </ul>
 `;
+return template;
+}
 
 export default class PaginationComponent extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
-        this.shadowRoot.appendChild(template.content.cloneNode(true));
+        const template = markupTemplate();
+this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
 
     connectedCallback() {
@@ -203,5 +208,3 @@ export default class PaginationComponent extends HTMLElement {
         });
     }
 }
-
-window.customElements.define('app-pagination', PaginationComponent);

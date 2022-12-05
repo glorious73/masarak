@@ -1,6 +1,8 @@
 
 
-const template = document.createElement('template');
+function markupTemplate() {
+    const template = document.createElement('template');
+
 
 template.innerHTML = /*html*/`
     <style>
@@ -17,6 +19,8 @@ template.innerHTML = /*html*/`
         </div>
     </div>
 `;
+return template;
+}
 
 export default class SelectComponent extends HTMLElement {
 
@@ -29,7 +33,8 @@ export default class SelectComponent extends HTMLElement {
         this.value_ = '';
         // Select Component
         this.attachShadow({ mode: 'open' });
-        this.shadowRoot.appendChild(template.content.cloneNode(true));
+        const template = markupTemplate();
+this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
 
     get value() { return this.value_; }
@@ -156,5 +161,3 @@ export default class SelectComponent extends HTMLElement {
         selectIcon.setAttribute('data-icon', icon);
     }
 }
-
-window.customElements.define('app-select', SelectComponent);

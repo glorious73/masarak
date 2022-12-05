@@ -1,7 +1,9 @@
 import DashboardCardComponent from "../DashboardCard/DashboardCardComponent";
 
 
-const template = document.createElement('template');
+function markupTemplate() {
+    const template = document.createElement('template');
+
 
 template.innerHTML = /*html*/`
     <style>
@@ -18,12 +20,15 @@ template.innerHTML = /*html*/`
         </app-dashboard-card>
     </div>
 `;
+return template;
+}
 
 export default class DashboardComponent extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
-        this.shadowRoot.appendChild(template.content.cloneNode(true));
+        const template = markupTemplate();
+this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
 
     connectedCallback() {
@@ -34,5 +39,3 @@ export default class DashboardComponent extends HTMLElement {
 
     }
 }
-
-window.customElements.define('app-dashboard', DashboardComponent);

@@ -1,16 +1,21 @@
-const template = document.createElement('template');
+function markupTemplate() {
+    const template = document.createElement('template');
+
 
 template.innerHTML = /*html*/`
     <style>
    ${window.GlobalVariables.styles}
     </style>
 `;
+return template;
+}
 
 export default class RouterView extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
-        this.shadowRoot.appendChild(template.content.cloneNode(true));
+        const template = markupTemplate();
+this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
 
     connectedCallback() {
@@ -21,5 +26,3 @@ export default class RouterView extends HTMLElement {
 
     }
 }
-
-window.customElements.define('router-view', RouterView);

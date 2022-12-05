@@ -1,7 +1,9 @@
 
 import FileService from "../../../Service/File/FileService";
 
-const template = document.createElement('template');
+function markupTemplate() {
+    const template = document.createElement('template');
+
 
 template.innerHTML = /*html*/`
     <style>
@@ -15,6 +17,8 @@ template.innerHTML = /*html*/`
         <label class="file-upload-name text-wrap fileNameLabel"></label>
     </div>
 `;
+return template;
+}
 
 export default class FileComponent extends HTMLElement {
 
@@ -27,7 +31,8 @@ export default class FileComponent extends HTMLElement {
         this.value_ = '';
         // File Component
         this.attachShadow({ mode: 'open' });
-        this.shadowRoot.appendChild(template.content.cloneNode(true));
+        const template = markupTemplate();
+this.shadowRoot.appendChild(template.content.cloneNode(true));
         this.maxFileSize = 0; // MB
         this.isMaxFileSize = false;
         this.errorMessage = '';
@@ -121,5 +126,3 @@ export default class FileComponent extends HTMLElement {
         return isValidFile;
     }
 }
-
-window.customElements.define('app-file', FileComponent);

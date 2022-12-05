@@ -1,4 +1,6 @@
-const template = document.createElement('template');
+function markupTemplate() {
+    const template = document.createElement('template');
+
 
 template.innerHTML = /*html*/`
     <style>
@@ -16,12 +18,15 @@ template.innerHTML = /*html*/`
         <label id="message"></label>
     </div>
 `;
+return template;
+}
 
 export default class AlertComponent extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
-        this.shadowRoot.appendChild(template.content.cloneNode(true));
+        const template = markupTemplate();
+this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
 
     connectedCallback() {
@@ -50,5 +55,3 @@ export default class AlertComponent extends HTMLElement {
         this.shadowRoot.querySelector('#toaster').classList.toggle("show");
     }
 }
-
-window.customElements.define('app-alert', AlertComponent);

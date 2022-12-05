@@ -3,7 +3,9 @@ import AlertsComponent from "../Component/Alert/AlertsComponent";
 import NavbarComponent from "../Component/UI/Navbar/NavbarComponent";
 import RouterView from "./RouterView";
 
-const template = document.createElement('template');
+function markupTemplate() {
+    const template = document.createElement('template');
+
 
 template.innerHTML = /*html*/`
     <style>
@@ -17,12 +19,15 @@ template.innerHTML = /*html*/`
         </div>
     </div>
 `;
+return template;
+}
 
 export default class MainView extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
-        this.shadowRoot.appendChild(template.content.cloneNode(true));
+        const template = markupTemplate();
+this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
 
     connectedCallback() {
@@ -36,7 +41,6 @@ export default class MainView extends HTMLElement {
         // Views
         document.addEventListener("toggleUIForUser", evt => {
             const isDisplayed = evt.detail.data;
-            this.setBackgroundColor(isDisplayed);
             this.toggleNavbar(isDisplayed);
         });
     }
@@ -57,16 +61,9 @@ export default class MainView extends HTMLElement {
         });
     }
 
-    // is user authenticated
-    setBackgroundColor(isDisplayed) {
-        const mainView = this.shadowRoot.querySelector(".content");
-        mainView.className = (isDisplayed) ? 'content' : 'content login-background';
-    }
-
+    // different if user is authenticated
     toggleNavbar(isDisplayed) {
         const navbarView = this.shadowRoot.querySelector(".navbar");
-        navbarView.className = (isDisplayed) ? "navbar" : "navbar d-none"; 
+        // to figure this out
     }
 }
-
-window.customElements.define('main-view', MainView);

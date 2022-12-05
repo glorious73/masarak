@@ -1,7 +1,9 @@
 
 import AuthService from "../../../Service/Auth/AuthService";
 
-const template = document.createElement('template');
+function markupTemplate() {
+    const template = document.createElement('template');
+
 
 template.innerHTML = /*html*/`
     <style>
@@ -26,12 +28,15 @@ template.innerHTML = /*html*/`
         </div>
     </div>
 `;
+return template;
+}
 
 export default class UserMenuComponent extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
-        this.shadowRoot.appendChild(template.content.cloneNode(true));
+        const template = markupTemplate();
+this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
 
     connectedCallback() {
@@ -83,5 +88,3 @@ export default class UserMenuComponent extends HTMLElement {
         authService.logout();
     }
 }
-
-window.customElements.define('app-user-menu', UserMenuComponent);

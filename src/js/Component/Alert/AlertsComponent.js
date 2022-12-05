@@ -2,7 +2,9 @@
 
 import AlertComponent from "./AlertComponent";
 
-const template = document.createElement('template');
+function markupTemplate() {
+    const template = document.createElement('template');
+
 
 template.innerHTML = /*html*/`
     <style>
@@ -12,12 +14,15 @@ template.innerHTML = /*html*/`
     
     </div> 
 `;
+return template;
+}
 
 export default class AlertsComponent extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
-        this.shadowRoot.appendChild(template.content.cloneNode(true));
+        const template = markupTemplate();
+this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
 
     connectedCallback() {
@@ -41,4 +46,3 @@ export default class AlertsComponent extends HTMLElement {
     }
 }
 
-window.customElements.define('app-alerts', AlertsComponent);

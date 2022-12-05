@@ -6,7 +6,9 @@ import TableComponent from "../../UI/Table/TableComponent";
 import PaginationComponent from "../../UI/Pagination/PaginationComponent";
 import SearchComponent from "../../UI/Search/SearchComponent";
 
-const template = document.createElement('template');
+function markupTemplate() {
+    const template = document.createElement('template');
+
 
 template.innerHTML = /*html*/`
     <style>
@@ -37,12 +39,15 @@ template.innerHTML = /*html*/`
         </app-pagination>
     </div>
 `;
+return template;
+}
 
 export default class UsersComponent extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
-        this.shadowRoot.appendChild(template.content.cloneNode(true));
+        const template = markupTemplate();
+this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
 
     connectedCallback() {
@@ -100,5 +105,3 @@ export default class UsersComponent extends HTMLElement {
         }
     }
 }
-
-window.customElements.define('app-users', UsersComponent);

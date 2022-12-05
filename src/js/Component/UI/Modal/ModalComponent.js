@@ -1,7 +1,9 @@
 
 import DeleteFormComponent from "../../DeleteForm/DeleteFormComponent";
 
-const template = document.createElement('template');
+function markupTemplate() {
+    const template = document.createElement('template');
+
 
 template.innerHTML = /*html*/`
     <style>
@@ -21,12 +23,15 @@ template.innerHTML = /*html*/`
         </div>
     </div>
 `;
+return template;
+}
 
 export default class ModalComponent extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
-        this.shadowRoot.appendChild(template.content.cloneNode(true));
+        const template = markupTemplate();
+this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
 
     connectedCallback() {
@@ -56,5 +61,3 @@ export default class ModalComponent extends HTMLElement {
         this.shadowRoot.getRootNode().host.classList.toggle('app-modal');
     }
 }
-
-window.customElements.define('app-modal', ModalComponent);
