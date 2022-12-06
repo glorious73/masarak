@@ -14,7 +14,7 @@ template.innerHTML = /*html*/`
             <!--To change the image source-->
             <img src="${window.GlobalVariables.IMG_PATH}/masarak_logo_white.png" class="img-login"/>
         </div>
-        <div class="card-login-form">
+        <div class="card-login-form pb-2">
             <h1 class="card-login-title">مستخدم جديد</h2>
             <form action="" id="signupForm">
                 <div class="form-row">
