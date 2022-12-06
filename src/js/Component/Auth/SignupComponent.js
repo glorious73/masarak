@@ -27,10 +27,10 @@ template.innerHTML = /*html*/`
                 </div>
                 <div class="form-row">
                     <label for="type">نوع الحساب</label>
-                    <app-select name="type" data-theme="secondary" data-is-border="true" data-items='${JSON.stringify([{code: 'طالب', name:'طالب'}, {code: 'منسوب جامعة', name:'منسوب جامعة'}])}' data-key="code" data-value="name">
+                    <app-select name="type" data-theme="secondary" data-is-border="true" data-items='${JSON.stringify([{code: 'طالب', name:'طالب'}, {code: 'منسوب جامعة', name:'منسوب جامعة'}])}' data-key="code" data-value="name" data-item-selected-event="typeSelectedEvent">
                     </app-select>
                 </div>
-                <div class="form-row form-row-two-fields">
+                <div class="form-row form-row-two-fields" id="typeInformation">
                     <div class="form-row-field">
                         <label for="qodorat">درجة القدرات</label>
                         <input type="number" class="input-text input-text-border" id="qodorat" name="qodorat" required>
@@ -74,6 +74,9 @@ export default class SignupComponent extends HTMLElement {
 
     connectedCallback() {
         this.alertService = new AlertService();
+        document.addEventListener("typeSelectedEvent", async (e) => {
+            this.loadUserTypeInformation(e.detail.data);
+        });
         this.shadowRoot.querySelector('#signupForm').addEventListener('submit', async (e) => {
             e.preventDefault();
             try {
@@ -88,6 +91,37 @@ export default class SignupComponent extends HTMLElement {
 
     disconnectedCallback() {
         this.alertService = null;
+        document.removeEventListener("typeSelectedEvent", async (e) => {
+            this.loadUserTypeInformation(e.detail.data);
+        });
+    }
+
+    loadUserTypeInformation(type) {
+        const typeInformation = this.shadowRoot.querySelector('#typeInformation');
+        if(type.code == 'طالب') {
+            typeInformation.innerHTML = `
+            <div class="form-row-field">
+                <label for="qodorat">درجة القدرات</label>
+                <input type="number" class="input-text input-text-border" id="qodorat" name="qodorat" required>
+            </div>
+            <div class="form-row-field">
+                <label for="tahsili">درجة التحصيلي</label>
+                <input type="number" class="input-text input-text-border" id="tahsili" name="tahsili" required>
+            </div>
+            `;
+        }
+        else {
+            typeInformation.innerHTML = `
+            <div class="form-row-field">
+                <label for="uni">الجامعة</label>
+                <input type="text" class="input-text input-text-border" id="uni" name="uni" required>
+            </div>
+            <div class="form-row-field">
+                <label for="relation">العلاقة بالجامعة</label>
+                <input type="text" class="input-text input-text-border" id="relation" name="relation" required>
+            </div>
+            `;
+        }
     }
 
     async signup(e) {
