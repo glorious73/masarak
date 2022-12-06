@@ -140,6 +140,12 @@ input#nav-dropdown:checked~ul {
     display: none;
 }
 
+@media only screen and (min-width: 993px) {
+    .hyperlink-nav-hide {
+        display: none !important;
+    }
+}
+
 /*-- /Responsive --*/
 
 /*----- Media Query for mobile and tablet devices -----*/

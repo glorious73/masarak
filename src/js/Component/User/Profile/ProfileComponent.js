@@ -10,38 +10,38 @@ template.innerHTML = /*html*/`
     <style>
    ${window.GlobalVariables.styles}
     </style>
-    <div class="card card-primary card-small-shadow p-2 m-2">
+    <div class="card card-primary card-active-border p-2 m-2">
         <div class="d-flex flex-row justify-content-start align-items-center mb-2">
             <h2>
-            <app-svg-icon data-icon="person" data-class="icon">
+            <app-svg-icon data-icon="person" data-class="icon icon-small">
             </app-svg-icon>
-            Profile
+            الملف الشخصي
             </h2>
         </div>
         <div class="customer-form mb-2">
             <div class="customer-form-field">
-                <h4 class="customer-field-label">First Name: </h4>
-                <input type="text" class="input-text input-text-border" id="firstName" value="--" disabled>
+                <h4 class="customer-field-label">الاسم الأول</h4>
+                <input type="text" class="input-text input-text-border" id="firstName" value="احمد" disabled>
             </div>
             <div class="customer-form-field">
-                <h4 class="customer-field-label">Last Name: </h4>
-                <input type="text" class="input-text input-text-border" id="lastName" value="--" disabled>
+                <h4 class="customer-field-label">الاسم الأخير</h4>
+                <input type="text" class="input-text input-text-border" id="lastName" value="محمد" disabled>
             </div>
             <div class="customer-form-field">
-                <h4 class="customer-field-label">Username: </h4>
-                <input type="text" class="input-text input-text-border" id="username" value="--" disabled>
+                <h4 class="customer-field-label">اسم المستخدم</h4>
+                <input type="text" class="input-text input-text-border" id="username" value="ahmad" disabled>
             </div>
             <div class="customer-form-field">
-                <h4 class="customer-field-label">Email Address: </h4>
-                <input type="text" class="input-text input-text-border" id="email" value="--" disabled>
+                <h4 class="customer-field-label">البريد الإلكتروني</h4>
+                <input type="text" class="input-text input-text-border" id="email" value="ahmad@email.com" disabled>
             </div>
             <div class="customer-form-field">
-                <h4 class="customer-field-label">Phone Number: </h4>
-                <input type="text" class="input-text input-text-border" id="phoneNumber" value="--" disabled>
+                <h4 class="customer-field-label">العمر</h4>
+                <input type="text" class="input-text input-text-border" id="phoneNumber" value="17 سنة" disabled>
             </div>
             <div class="customer-form-field">
-                <h4 class="customer-field-label">Role: </h4>
-                <input type="text" class="input-text input-text-border" id="Role" value="--" disabled>
+                <h4 class="customer-field-label">نوع الحساب</h4>
+                <input type="text" class="input-text input-text-border" id="Role" value="طالب" disabled>
             </div>
         </div>
     </div>
@@ -61,10 +61,10 @@ this.shadowRoot.appendChild(template.content.cloneNode(true));
         // service
         this.uiService = new UIService();
         // Data binding
-        this.uiService.dataBindElements(this,"input&--&value");
+        //this.uiService.dataBindElements(this,"input&--&value");
         // load user
-        const user = JSON.parse(localStorage.getItem("user"));
-        this.updateUserInformation(user);
+        //const user = JSON.parse(localStorage.getItem("user"));
+        //this.updateUserInformation(user);
     }
 
     disconnectedCallback() {

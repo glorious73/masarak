@@ -11,7 +11,7 @@ template.innerHTML = /*html*/`
     <style>
    ${window.GlobalVariables.styles}
     </style>
-    <div class="card-login" style="height: 100vh;">
+    <div class="card-login">
         <div class="card-login-logo">
             <!--To change the image source-->
             <img src="${window.GlobalVariables.IMG_PATH}/masarak_logo_white.png" class="img-login"/>
@@ -74,6 +74,11 @@ export default class LoginComponent extends HTMLElement {
         try {
             // Login
             const user = await setTimeout(2000, () => console.log("emulated login"));
+            document.dispatchEvent(new CustomEvent("userLoggedEvent", {
+                detail: {
+                    data: "logged in"
+                }
+            }));
             // Reload w/ new user
             window.location.href = '#/questions';
         }

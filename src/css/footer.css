@@ -25,11 +25,18 @@
     padding: 0;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 992px) {
     .footer {
+        margin-top: 0px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+}
+
+@media only screen and (max-width: 576) {
+    .footer {
+        margin-top: 0px;
     }
 }

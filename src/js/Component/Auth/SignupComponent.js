@@ -9,7 +9,7 @@ template.innerHTML = /*html*/`
     <style>
    ${window.GlobalVariables.styles}
     </style>
-    <div class="card-login" style="height: 100vh;">
+    <div class="card-login">
         <div class="card-login-logo">
             <!--To change the image source-->
             <img src="${window.GlobalVariables.IMG_PATH}/masarak_logo_white.png" class="img-login"/>
@@ -44,7 +44,7 @@ template.innerHTML = /*html*/`
                     <input type="email" class="input-text input-text-border" id="email" name="email" required>
                 </div>
                 <div class="form-row">
-                    <label for="username">نوع المستخدم</label>
+                    <label for="username">نوع الحساب</label>
                     <app-select name="auditorId" data-theme="secondary" data-is-border="true" data-items='${JSON.stringify([{code: 'طالب', name:'طالب'}, {code: 'منسوب جامعة', name:'منسوب جامعة'}])}' data-key="code" data-value="name" form="addForm">
                     </app-select>
                 </div>

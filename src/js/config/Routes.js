@@ -67,8 +67,8 @@ export const Routes =
     },
     UserProfile: {
         name: 'app-user-profile',
-        path: '#/user/profile',
-        pathRegex: '^#/user/profile$'
+        path: '#/profile',
+        pathRegex: '^#/profile$'
     },
     Roles: {
         name: 'app-roles',

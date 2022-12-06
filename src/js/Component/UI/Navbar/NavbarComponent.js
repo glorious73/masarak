@@ -29,11 +29,15 @@ function markupTemplate() {
                     <a href="">الصفحة الرئيسية</a>
                     <a href="#/faqs">الأسئلة الشائعة</a>
                     <a href="#/contactus">تواصل معنا</a>
+                    <a href="#/signup" class="hyperlink-nav-hide" id="btnRegisterActive">التسجيل
+                    </a>
+                    <a href="#/login" class="hyperlink-nav-hide" id="btnRegisterPrimary">تسجيل الدخول
+                    </a>
                     <input type="checkbox" id="nav-dropdown">
                 </div>
                 <div class="nav-registration">
-                    <a href="#/signup" class="hyperlink active">التسجيل</a>
-                    <a href="#/login" class="hyperlink primary">تسجيل الدخول</a>
+                    <a href="#/signup" class="hyperlink active" id="btnRegisterActive">التسجيل</a>
+                    <a href="#/login" class="hyperlink primary" id="btnRegisterPrimary">تسجيل الدخول</a>
                 </div>
             </div>
         </header>
@@ -50,12 +54,14 @@ export default class NavbarComponent extends HTMLElement {
     }
 
     connectedCallback() {
+        document.addEventListener("userLoggedEvent", (e) => this.toggleNavbarRegistration(e));
         // Navbar button
         this.shadowRoot.querySelector('.nav-btn').addEventListener('click', 
             (e) => this.toggleNavbarButtonEvent(e));
     }
 
     disconnectedCallback() {
+        document.removeEventListener("userLoggedEvent", (e) => this.toggleNavbarRegistration(e));
         this.shadowRoot.querySelector('.nav-btn').removeEventListener('click', 
             (e) => this.toggleNavbarButtonEvent(e));
     }
@@ -63,5 +69,33 @@ export default class NavbarComponent extends HTMLElement {
     // navbar button event
     toggleNavbarButtonEvent(e) {
         
+    }
+
+    toggleNavbarRegistration(e) {
+        const state = e.detail.data;
+        const btnActive = this.shadowRoot.querySelector("#btnRegisterActive");
+        const btnPrimary = this.shadowRoot.querySelector("#btnRegisterPrimary");
+        if(state == 'logged in') {            
+            btnActive.innerHTML = 'الملف الشخصي';
+            btnActive.setAttribute("href", '#/profile');
+            btnPrimary.innerHTML = 'تسجيل الخروج';
+            btnPrimary.setAttribute("href", '#');
+            btnPrimary.addEventListener('click', (e) => this.logout());
+        }
+        else {
+            btnActive.innerHTML = 'التسجيل';
+            btnActive.setAttribute("href", '#/signup');
+            btnPrimary.innerHTML = 'تسجيل الدخول';
+            btnPrimary.setAttribute("href", '#/login');
+            btnPrimary.removeEventListener('click', (e) => this.logout());
+        }
+    }
+
+    logout() {
+        document.dispatchEvent(new CustomEvent("userLoggedEvent", {
+            detail: {
+                data: "logged out"
+            }
+        }));
     }
 }

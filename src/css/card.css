@@ -27,6 +27,7 @@
     justify-content: stretch;
     align-items: stretch;
     margin: 0;
+    height: 100vh;
 }
 .card-login-logo {
     flex-grow: 1;
@@ -58,7 +59,7 @@
         flex-direction: row;
         justify-content: stretch;
         align-items: stretch;
-        margin: 10vh 0.5rem !important;
+        height: initial;
     }
     .card-login-logo {
         flex-grow: 1;
@@ -89,7 +90,6 @@
         flex-direction: column;
         justify-content: stretch;
         align-items: stretch;
-        margin: 5vh 1rem 1vh 1rem !important;
     }
     .card-login-logo {
         flex-grow: 1;
