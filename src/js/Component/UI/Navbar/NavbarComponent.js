@@ -56,8 +56,13 @@ export default class NavbarComponent extends HTMLElement {
     connectedCallback() {
         document.addEventListener("userLoggedEvent", (e) => this.toggleNavbarRegistration(e));
         // Navbar button
-        this.shadowRoot.querySelector('.nav-btn').addEventListener('click', 
+        const sroot = this.shadowRoot;
+        sroot.querySelector('.nav-btn').addEventListener('click', 
             (e) => this.toggleNavbarButtonEvent(e));
+        sroot.querySelector('.nav-items').addEventListener('click', (e) => {
+            console.log(`nav items clicked`);
+            sroot.querySelector('#nav-check').checked =  false;
+        });
     }
 
     disconnectedCallback() {
