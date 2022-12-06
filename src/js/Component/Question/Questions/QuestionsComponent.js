@@ -19,7 +19,7 @@ function markupTemplate() {
                 <button class="btn-action btn-action-secondary active" id="btnNewQuestion">أضف سؤالك</button>
             </div>
             <div class="card card-primary card-secondary-border card-no-hover-shadow p-3 comments">
-                <app-question-item></app-question-item>
+                <app-question-item data-question='${JSON.stringify({question: 'ما هي أفضل جامعة في السعودية لتخصص الهندسة؟', answer: 'تعتمد على كيفية دراستك وشريحة الطلاب الذين تريد أن تدرس معهم.', created: '2022-12-06'})}'></app-question-item>
             </div>
         </div>
         <app-modal class="app-modal"></app-modal>
