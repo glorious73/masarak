@@ -28,10 +28,19 @@ export default class AnswerFormComponent extends HTMLElement {
     }
 
     connectedCallback() {
-        
+        this.shadowRoot.querySelector('#addAnswerForm').addEventListener('submit', async (evt) => {
+            evt.preventDefault();
+            this.shadowRoot.querySelector('#btnSubmit').setAttribute('disabled', '');
+            await this.addAnswer(evt);
+            this.shadowRoot.querySelector('#btnSubmit').removeAttribute('disabled');
+        });
     }
 
     disconnectedCallback() {
 
+    }
+
+    addAnswer() {
+        console.log(`answered`);
     }
 }
