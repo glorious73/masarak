@@ -109,5 +109,6 @@ export default class NavbarComponent extends HTMLElement {
                 data: "logged out"
             }
         }));
+        window.location.reload();
     }
 }
