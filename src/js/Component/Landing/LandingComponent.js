@@ -9,27 +9,27 @@ function markupTemplate() {
         ${window.GlobalVariables.styles}
         </style>
         <div class="bg-landing fade-in">
-            <div class="flex-grow-1 mx-2 mt-2">
+            <div class="bg-landing-content">
                 <h1 class="title text-white">مسارك</h2>
                 <h2 class="text-white word-wrap-landing">منصة لتيسير عملية ايجاد التخصص الجامعي المناسب لطلاب وخريجي الثانوية والتأكد من رغبتهم في بناء مستقبل بذلك المجال.</h2>
                 <div class="mt-4 mx-2">
-                    <a class="hyperlink active">سجل الآن</a>
+                    <a href="#/signup" class="hyperlink active">سجل الآن</a>
                 </div>
             </div>
             <div class="img-landing-container">
                 <img src="assets/img/undraw_absorbed_in.svg">
             </div>
         </div>
-        <div class="card card-primary card-active-border d-flex flex-row justify-content-around align-items-center py-3 mb-2" style="width: 70vw; margin: auto; position: relative; z-index: 3;">
-            <div class="d-flex flex-column justify-content-center align-items-center">
+        <div class="card card-primary card-active-border card-numbers-information">
+            <div class="number-information">
                 <h1 class="main-statistic">+42</h1>
                 <label class="number-statistic">الجامعات</label>
             </div>
-            <div class="d-flex flex-column justify-content-center align-items-center">
+            <div class="number-information">
                 <h1 class="main-statistic">+5</h1>
                 <label class="number-statistic">المسارات</label>
             </div>
-            <div class="d-flex flex-column justify-content-center align-items-center">
+            <div class="number-information">
                 <h1 class="main-statistic">+350K</h1>
                 <label class="number-statistic">الطلاب المتخرجين</label>
             </div>

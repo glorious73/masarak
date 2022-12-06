@@ -6,7 +6,7 @@ function markupTemplate() {
         <style>
         ${window.GlobalVariables.styles}
         </style>
-            <section class="offerings">
+            <div class="offerings">
                 <div class="card card-primary card-secondary-border offering">
                     <app-svg-icon data-icon="check-circle" data-class="icon icon-offering" data-svg-style="stroke: #add8e6; fill: #add8e6;" data-view-box="-1 -1 20 20">
                     </app-svg-icon>
@@ -22,7 +22,7 @@ function markupTemplate() {
                     </app-svg-icon>
                     <label class="offering-text">توفير مصادر المعلومات للطلاب والخريجين</label>
                 </div>
-            </section>
+            </div>
         </div>
     `;
 

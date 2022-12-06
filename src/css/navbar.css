@@ -150,6 +150,14 @@ input#nav-dropdown:checked~ul {
 
 /*----- Media Query for mobile and tablet devices -----*/
 @media only screen and (max-width: 992px) {
+    header {
+        height: 85px;
+        margin-bottom: 0;
+    }
+    .nav {
+        position: static;
+        height: 85px;
+    }
     /* Width covers entire screen */
 
     /* /Width Covers Entire Screen */
@@ -164,12 +172,12 @@ input#nav-dropdown:checked~ul {
     /* Navbar Toggle */
     .nav>.nav-btn {
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         flex-grow: 1;
-        width: 100%;
+        width: initial;
         height: 85px;
         padding-top: 28px;
-        padding-right: 20%;
+        margin-left: 60px;
     }
 
     .nav>.nav-btn>label {

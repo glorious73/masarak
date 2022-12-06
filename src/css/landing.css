@@ -13,6 +13,11 @@
     overflow-x: hidden;
 }
 
+.bg-landing-content {
+    flex-grow: 1; 
+    margin: 2rem 2rem 0 2rem;
+}
+
 .img-landing-container {
     flex-grow: 1;
     margin-right: 2rem;
@@ -32,6 +37,27 @@
     font-size: 1.5rem;
 }
 
+.card-numbers-information {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 70vw; 
+    margin: auto; 
+    position: relative; 
+    z-index: 3;
+    margin-bottom: 2rem;
+    padding-top : 3rem;
+    padding-bottom : 3rem;
+}
+
+.number-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .features {
     display: flex;
     flex-direction: column;
@@ -47,6 +73,7 @@
 .features-title {
     font-size: 2rem;
     margin-bottom: 1rem;
+    text-align: center;
 }
 .word-wrap-features {
     word-wrap: break-word;
@@ -93,9 +120,56 @@
 @media only screen and (max-width: 992px) {
     .bg-landing {
         flex-direction: column;
+        margin-top: 0;
+    }
+    .bg-landing-content {
+        z-index: 3;
     }
     .img-landing-container {
-        display: none;
+        z-index: 1;
+        margin-top: -20rem;
+    }
+    .features {
+        margin-top: 0;
+    }
+    .card-numbers-information {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 70vw; 
+        z-index: 3;
+        margin-bottom: 2rem;
+        padding-top : 3rem;
+        padding-bottom : 3rem;
+    }
+    .number-information {
+        flex-direction: row-reverse;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .offerings {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 !important;
+        margin: 2rem auto !important;
+    }
+    
+    .offering {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 4rem;
+        margin: 2rem auto;
+    }
+    .offering-text {
+        margin-top: 0; 
+        font-size: 1.2rem;
+        text-align: center;
+        word-wrap: break-word;
+        width: 10rem;
     }
 }
 

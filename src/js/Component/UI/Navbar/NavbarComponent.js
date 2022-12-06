@@ -29,9 +29,9 @@ function markupTemplate() {
                     <a href="">الصفحة الرئيسية</a>
                     <a href="#/faqs">الأسئلة الشائعة</a>
                     <a href="#/contactus">تواصل معنا</a>
-                    <a href="#/signup" class="hyperlink-nav-hide" id="btnRegisterActive">التسجيل
+                    <a href="#/signup" class="hyperlink-nav-hide" id="btnRegisterActiveSmall">التسجيل
                     </a>
-                    <a href="#/login" class="hyperlink-nav-hide" id="btnRegisterPrimary">تسجيل الدخول
+                    <a href="#/login" class="hyperlink-nav-hide" id="btnRegisterPrimarySmall">تسجيل الدخول
                     </a>
                     <input type="checkbox" id="nav-dropdown">
                 </div>
@@ -75,19 +75,31 @@ export default class NavbarComponent extends HTMLElement {
         const state = e.detail.data;
         const btnActive = this.shadowRoot.querySelector("#btnRegisterActive");
         const btnPrimary = this.shadowRoot.querySelector("#btnRegisterPrimary");
+        const btnActiveSmall = this.shadowRoot.querySelector("#btnRegisterActiveSmall");
+        const btnPrimarySmall = this.shadowRoot.querySelector("#btnRegisterPrimarySmall");
         if(state == 'logged in') {            
             btnActive.innerHTML = 'الملف الشخصي';
             btnActive.setAttribute("href", '#/profile');
+            btnActiveSmall.innerHTML = 'الملف الشخصي';
+            btnActiveSmall.setAttribute("href", '#/profile');
             btnPrimary.innerHTML = 'تسجيل الخروج';
             btnPrimary.setAttribute("href", '#');
             btnPrimary.addEventListener('click', (e) => this.logout());
+            btnPrimarySmall.innerHTML = 'تسجيل الخروج';
+            btnPrimarySmall.setAttribute("href", '#');
+            btnPrimarySmall.addEventListener('click', (e) => this.logout());
         }
         else {
             btnActive.innerHTML = 'التسجيل';
             btnActive.setAttribute("href", '#/signup');
+            btnActiveSmall.innerHTML = 'التسجيل';
+            btnActiveSmall.setAttribute("href", '#/signup');
             btnPrimary.innerHTML = 'تسجيل الدخول';
             btnPrimary.setAttribute("href", '#/login');
             btnPrimary.removeEventListener('click', (e) => this.logout());
+            btnPrimarySmall.innerHTML = 'تسجيل الدخول';
+            btnPrimarySmall.setAttribute("href", '#/login');
+            btnPrimarySmall.removeEventListener('click', (e) => this.logout());
         }
     }
 

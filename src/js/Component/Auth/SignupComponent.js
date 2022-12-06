@@ -25,6 +25,11 @@ template.innerHTML = /*html*/`
                     <label for="username">تاريخ الميلاد</label>
                     <input type="date" class="input-text input-text-border" id="age" name="age" required>
                 </div>
+                <div class="form-row">
+                    <label for="type">نوع الحساب</label>
+                    <app-select name="type" data-theme="secondary" data-is-border="true" data-items='${JSON.stringify([{code: 'طالب', name:'طالب'}, {code: 'منسوب جامعة', name:'منسوب جامعة'}])}' data-key="code" data-value="name">
+                    </app-select>
+                </div>
                 <div class="form-row form-row-two-fields">
                     <div class="form-row-field">
                         <label for="qodorat">درجة القدرات</label>
@@ -42,11 +47,6 @@ template.innerHTML = /*html*/`
                 <div class="form-row">
                     <label for="username">البريد الالكتروني</label>
                     <input type="email" class="input-text input-text-border" id="email" name="email" required>
-                </div>
-                <div class="form-row">
-                    <label for="username">نوع الحساب</label>
-                    <app-select name="auditorId" data-theme="secondary" data-is-border="true" data-items='${JSON.stringify([{code: 'طالب', name:'طالب'}, {code: 'منسوب جامعة', name:'منسوب جامعة'}])}' data-key="code" data-value="name" form="addForm">
-                    </app-select>
                 </div>
                 <div class="form-row">
                     <label for="password">كلمة المرور</label>

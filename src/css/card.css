@@ -21,6 +21,10 @@
     color: var(--text-color);
 }
 
+.card-no-hover-shadow:hover {
+    box-shadow: 0 0 0 0 !important;
+}
+
 .card-login {
     display: flex;
     flex-direction: row;
