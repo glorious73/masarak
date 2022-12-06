@@ -48,6 +48,6 @@
 
 @media screen and (max-width: 768px) {
     .section-questions {
-        padding: 1rem;
+        padding: 2rem 1rem;
     }
 }
