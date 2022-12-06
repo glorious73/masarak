@@ -40,6 +40,11 @@ export const Routes =
         path: '#/contactus',
         pathRegex: '^#/contactus$'
     },
+    Questions: {
+        name: 'app-questions',
+        path: '#/questions',
+        pathRegex: '^#/questions$'
+    },
     Dashboard: {
         name: 'app-dashboard',
         path: '#/dashboard',

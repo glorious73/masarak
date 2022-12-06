@@ -73,10 +73,9 @@ export default class LoginComponent extends HTMLElement {
         const authService = new AuthService();
         try {
             // Login
-            const user = await authService.login(e.target);
+            const user = await setTimeout(2000, () => console.log("emulated login"));
             // Reload w/ new user
-            window.location.href = '#/dashboard';
-            window.location.reload();
+            window.location.href = '#/questions';
         }
         catch(err) {
             this.alertService.showAlert("Error", err.message);

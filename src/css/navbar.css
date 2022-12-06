@@ -157,18 +157,17 @@ input#nav-dropdown:checked~ul {
     /* /Navbar Brand */
     /* Navbar Toggle */
     .nav>.nav-btn {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+        width: 100%;
         height: 85px;
-        display: inline-block;
-        position: absolute;
-        left: 0px;
-        top: 0px;
         padding-top: 28px;
-        padding-left: 40px;
+        padding-right: 20%;
     }
 
     .nav>.nav-btn>label {
         display: inline-block;
-        width: 100%;
         height: auto;
         font-size: 2rem;
         font-weight: bold;
@@ -249,4 +248,14 @@ input#nav-dropdown:checked~ul {
         border: 1px solid #ddd;
     }
     /* /Dropdown */
+
+    .nav > .nav-registration {
+        flex-grow: 0;
+        width: 0;
+        padding: 0;
+        display: none !important;
+    }
+    .nav > .nav-registration > a {
+        display: none !important;
+    }
 }

@@ -16,21 +16,28 @@
     display: flex;
     flex-direction: row;
     width: 100%;
+    background-color: var(--hover-color);
+    color: var(--primary-color);
+    padding: 1rem 0;
+    margin: 0;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
 }
 
 .comment-added-by {
-    color: var(--text-color);
+    font-size: 1.5rem;
+    color: var(--primary-color);
     flex-grow: 0;
     padding-left: 0.8rem;
-    padding-right: 1.2rem;
+    padding-right: 2rem;
 }
 
 .comment-date {
-    color: var(--disabled-color);
+    color: var(--greyed-out-color);
     flex-grow: 0;
 }
 
 .comment-item-body {
     color: var(--text-color);
-    padding: 1rem 1rem 2rem 1rem;
+    padding: 1rem 2rem 2rem 1rem;
 }

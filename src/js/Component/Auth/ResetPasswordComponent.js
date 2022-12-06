@@ -12,31 +12,31 @@ template.innerHTML = /*html*/`
     <style>
    ${window.GlobalVariables.styles}
     </style>
-    <div class="card card-primary card-animation card-login">
+    <div class="card-login" style="height: 100vh;">
         <div class="card-login-logo">
             <!--To change the image source-->
-            <img src="${window.GlobalVariables.IMG_PATH}/hawkamah_logo_white.png" class="img-login"/>
+            <img src="${window.GlobalVariables.IMG_PATH}/masarak_logo_white.png" class="img-login"/>
         </div>
         <div class="card-login-form">
-            <h1 class="card-login-title">Reset Password</h2>
+            <h1 class="card-login-title">استعادة كلمة السر</h2>
             <form action="" id="resetPasswordForm">
                 <input type="hidden" id="token" name="passwordResetToken">
                 <div class="form-row">
-                    <label for="newPassword">New Password</label>
+                    <label for="newPassword">كلمة السر الجديدة</label>
                     <input type="password" class="input-text input-text-border" id="newPassword" name="newPassword">
                 </div>
                 <div class="form-row">
-                    <label for="confirmNewPassword">Confirm New Password</label>
+                    <label for="confirmNewPassword">تأكيد كلمة السر الجديدة</label>
                     <input type="password" class="input-text input-text-border" id="confirmNewPassword" name="confirmNewPassword">
                 </div>
                 <div class="form-row">
                     <button type="submit" class="btn-form btn-form-border btn-submit" id="btnSubmit">
-                        RESET PASSWORD
+                        استعادة كلمة السر
                     </button>
                 </div>
             </form>
             <div class="mt-2 d-flex flex-row justify-content-center">
-                <a class="auth-link" href="#/login">Login</a>
+                <a class="auth-link" href="#/login">تسجيل الدخول</a>
             </div>
         </div>  
     </div>

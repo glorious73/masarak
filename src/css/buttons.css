@@ -110,10 +110,12 @@
 
 .btn-comment {
     margin: 0.6rem 0;
-    padding: 0.7rem 0.8rem;
+    padding: 0.7rem 1.6rem;
     font-size: 1.3rem;
+    background-color: var(--active-color) !important;
+    color: var(--primary-color) !important;
 }
 .btn-comment-border {
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
 }

@@ -29,6 +29,9 @@ import FeaturesComponent from "./Component/Features/FeaturesComponent";
 import OfferingsComponent from "./Component/Offerings/OfferingsComponent";
 import FaqsComponent from "./Component/Faqs/FaqsComponent";
 import ContactComponent from "./Component/Contact/ContactComponent";
+import QuestionItemComponent from "./Component/Question/QuestionItem/QuestionItemComponent";
+import QuestionsComponent from "./Component/Question/Questions/QuestionsComponent";
+import AnswerFormComponent from "./Component/Question/AnswerForm/AnswerFormComponent";
 
 export default class Components {
     constructor() { }
@@ -65,6 +68,9 @@ export default class Components {
         window.customElements.define('app-offerings', OfferingsComponent);
         window.customElements.define('app-faqs', FaqsComponent);
         window.customElements.define('app-contact', ContactComponent);
+        window.customElements.define('app-question-item', QuestionItemComponent);
+        window.customElements.define('app-questions', QuestionsComponent);
+        window.customElements.define('app-answer-form', AnswerFormComponent);
     }
 
     addComponents(app) {
@@ -79,6 +85,10 @@ export default class Components {
         app.addComponent({
             name: 'app-contact',
             view: ContactComponent
+        });
+        app.addComponent({
+            name: 'app-questions',
+            view: QuestionsComponent
         });
         app.addComponent({
             name: 'app-alerts',

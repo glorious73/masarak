@@ -15,7 +15,7 @@ template.innerHTML = /*html*/`
             <!--Submit-->
             <button type="submit" class="btn-search" id="btnSubmit">
                 <app-svg-icon data-icon="search" data-class="icon-small">
-</app-svg-icon>
+                </app-svg-icon>
             </button>
             <!--Search input-->
             <input type="text" class="input-text-search" id="searchBar">
@@ -30,7 +30,7 @@ export default class SearchComponent extends HTMLElement {
         super();
         this.attachShadow({ mode: 'open' });
         const template = markupTemplate();
-this.shadowRoot.appendChild(template.content.cloneNode(true));
+        this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
 
     connectedCallback() {

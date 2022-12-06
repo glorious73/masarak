@@ -59,7 +59,7 @@
 
 .btn-search {
     background-color: transparent;
-    color: var(--secondary-color);
+    color: var(--active-color);
     border: none;
     outline: none;
     width: 20%;
@@ -77,7 +77,7 @@
     box-sizing: border-box;
     padding: 0.7rem 0 0.7rem 0.5rem;
     width: 100%;
-    
+    padding-right: 1rem;
     font-size: 0.95rem !important;
 }
 .input-text-search-label-border {
@@ -88,11 +88,5 @@
     color: var(--text-color);
     border-color: var(--accent-color);
     outline: none;
-}
-.input-text-search-label::placeholder {
-    font-style: italic;
-}
-.input-text-search-label::-webkit-input-placeholder {
-    font-style: italic;
 }
 /*-- /Search label --*/
