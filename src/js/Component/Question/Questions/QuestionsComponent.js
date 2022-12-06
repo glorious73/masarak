@@ -1,4 +1,5 @@
 import QuestionItemComponent from "../QuestionItem/QuestionItemComponent";
+import QuestionFormComponent from "../QuestionForm/QuestionFormComponent";
 import ModalComponent from "../../UI/Modal/ModalComponent";
 
 function markupTemplate() {
@@ -8,7 +9,7 @@ function markupTemplate() {
         <style>
         ${window.GlobalVariables.styles}
         </style>
-        <div class="p-4">
+        <div class="p-4 fade-in">
             <!--<div class="comments">
                 <app-search class="ui-table-header-item" data-name="searchQuery" data-theme="primary" data-is-border="true" data-placeholder="ابحث عن سؤال" data-api-endpoint="/api/questions" data-search-event="questionSearchEvent" data-response-item="question" data-is-display-item="false">
                 </app-search>
@@ -18,7 +19,7 @@ function markupTemplate() {
                 <span></span>
                 <button class="btn-action btn-action-secondary active" id="btnNewQuestion">أضف سؤالك</button>
             </div>
-            <div class="card card-primary card-secondary-border card-no-hover-shadow p-3 comments">
+            <div class="card card-primary card-secondary-border card-no-hover-shadow p-3 comments" id="questions">
                 <app-question-item data-question='${JSON.stringify({question: 'ما هي أفضل جامعة في السعودية لتخصص الهندسة؟', answer: 'تعتمد على كيفية دراستك وشريحة الطلاب الذين تريد أن تدرس معهم.', created: '2022-12-06'})}'></app-question-item>
             </div>
         </div>
@@ -37,20 +38,27 @@ export default class QuestionsComponent extends HTMLElement {
     }
 
     connectedCallback() {
+        document.addEventListener("newQuestionEvent", (e) => this.addNewQuestion(e));
         this.shadowRoot.querySelector("#btnNewQuestion").addEventListener('click', (e) => this.askQuestion());
     }
 
     disconnectedCallback() {
-
+        document.removeEventListener("newQuestionEvent", (e) => this.addNewQuestion(e));
     }
 
     askQuestion() {
         document.dispatchEvent(new CustomEvent('showModalEvent', {
             detail: {
                 title: `سؤال جديد`,
-                body: `<textarea class="input-text input-text-border" rows="6" id="question" name="question" placeholder="نص السؤال..."></textarea>`,
+                body: `<app-question-form></app-question-form>`,
                 caption: ''
             }
-        }));
+        }));   
+    }
+
+    addNewQuestion(e) {
+        this.shadowRoot.querySelector("#questions").innerHTML += `
+        <app-question-item data-question='${JSON.stringify(e.detail.data)}'></app-question-item>
+        `;
     }
 }

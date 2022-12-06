@@ -31,6 +31,7 @@ import FaqsComponent from "./Component/Faqs/FaqsComponent";
 import ContactComponent from "./Component/Contact/ContactComponent";
 import QuestionItemComponent from "./Component/Question/QuestionItem/QuestionItemComponent";
 import QuestionsComponent from "./Component/Question/Questions/QuestionsComponent";
+import QuestionFormComponent from "./Component/Question/QuestionForm/QuestionFormComponent";
 import AnswerFormComponent from "./Component/Question/AnswerForm/AnswerFormComponent";
 
 export default class Components {
@@ -70,6 +71,7 @@ export default class Components {
         window.customElements.define('app-contact', ContactComponent);
         window.customElements.define('app-question-item', QuestionItemComponent);
         window.customElements.define('app-questions', QuestionsComponent);
+        window.customElements.define('app-question-form', QuestionFormComponent);
         window.customElements.define('app-answer-form', AnswerFormComponent);
     }
 
