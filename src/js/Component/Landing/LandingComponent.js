@@ -8,7 +8,7 @@ function markupTemplate() {
         <style>
         ${window.GlobalVariables.styles}
         </style>
-        <div class="bg-landing fade-in d-flex flex-row">
+        <div class="bg-landing fade-in">
             <div class="flex-grow-1 mx-2 mt-2">
                 <h1 class="title text-white">مسارك</h2>
                 <h2 class="text-white word-wrap-landing">منصة لتيسير عملية ايجاد التخصص الجامعي المناسب لطلاب وخريجي الثانوية والتأكد من رغبتهم في بناء مستقبل بذلك المجال.</h2>
@@ -16,7 +16,7 @@ function markupTemplate() {
                     <a class="hyperlink active">سجل الآن</a>
                 </div>
             </div>
-            <div class="flex-grow-1 mx-2">
+            <div class="img-landing-container">
                 <img src="assets/img/undraw_absorbed_in.svg">
             </div>
         </div>

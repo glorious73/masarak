@@ -1,4 +1,6 @@
 .bg-landing {
+    display: flex;
+    flex-direction: row;
     position: relative;
     background-color: var(--accent-color);
     background-size: cover;
@@ -9,6 +11,12 @@
     height: auto;
     width: auto;
     overflow-x: hidden;
+}
+
+.img-landing-container {
+    flex-grow: 1;
+    margin-right: 2rem;
+    margin-left: 2rem;
 }
 
 .title {
@@ -82,14 +90,18 @@
     width: 45vw;
 }
 
+@media only screen and (max-width: 992px) {
+    .bg-landing {
+        flex-direction: column;
+    }
+    .img-landing-container {
+        display: none;
+    }
+}
+
 @media only screen and (max-width: 768px) { 
     .bg-landing {
       height: auto;
-    }
-    .img-main {
-        width: auto;
-        height: 8rem;
-        margin: 0.5rem 1.2rem 1.5rem 1.2rem;
     }
     .word-wrap-landing {
         word-wrap: break-word;
