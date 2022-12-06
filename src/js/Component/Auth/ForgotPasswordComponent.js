@@ -12,7 +12,7 @@ template.innerHTML = /*html*/`
     <style>
    ${window.GlobalVariables.styles}
     </style>
-    <div class="card-login">
+    <div class="card-login fade-in">
         <div class="card-login-logo">
             <!--To change the image source-->
             <img src="${window.GlobalVariables.IMG_PATH}/masarak_logo_white.png" class="img-login"/>
