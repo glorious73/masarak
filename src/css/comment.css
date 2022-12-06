@@ -1,3 +1,7 @@
+.section-questions {
+    padding: 4rem;
+}
+
 .comments {
     display: flex;
     flex-direction: column;
@@ -40,4 +44,10 @@
 .comment-item-body {
     color: var(--text-color);
     padding: 1rem 2rem 2rem 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .section-questions {
+        padding: 1rem;
+    }
 }

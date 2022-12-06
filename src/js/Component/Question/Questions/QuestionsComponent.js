@@ -9,11 +9,7 @@ function markupTemplate() {
         <style>
         ${window.GlobalVariables.styles}
         </style>
-        <div class="p-4 fade-in">
-            <!--<div class="comments">
-                <app-search class="ui-table-header-item" data-name="searchQuery" data-theme="primary" data-is-border="true" data-placeholder="ابحث عن سؤال" data-api-endpoint="/api/questions" data-search-event="questionSearchEvent" data-response-item="question" data-is-display-item="false">
-                </app-search>
-            </div>-->
+        <div class="section-questions fade-in">
             <div class="d-flex flex-row comments">
                 <span></span>
                 <span></span>
