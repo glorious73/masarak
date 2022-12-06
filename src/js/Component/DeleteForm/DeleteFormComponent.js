@@ -26,7 +26,7 @@ export default class DeleteFormComponent extends HTMLElement {
         super();
         this.attachShadow({ mode: 'open' });
         const template = markupTemplate();
-this.shadowRoot.appendChild(template.content.cloneNode(true));
+        this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
 
     connectedCallback() {
