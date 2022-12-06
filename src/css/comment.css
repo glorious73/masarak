@@ -19,6 +19,7 @@
 .comment-item-header {
     display: flex;
     flex-direction: row;
+    align-items: center;
     width: 100%;
     background-color: var(--hover-color);
     color: var(--primary-color);
@@ -39,6 +40,8 @@
 .comment-date {
     color: var(--greyed-out-color);
     flex-grow: 0;
+    padding-left: 0.8rem;
+    padding-right: 2rem;
 }
 
 .comment-item-body {
@@ -48,6 +51,15 @@
 
 @media screen and (max-width: 768px) {
     .section-questions {
-        padding: 2rem 1rem;
+        padding: 2rem 0.5rem;
+    }
+    .comment-item-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        padding: 1rem 0;
+        margin: 0;
     }
 }

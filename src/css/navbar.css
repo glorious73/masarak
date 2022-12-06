@@ -176,7 +176,7 @@ input#nav-dropdown:checked~ul {
         flex-grow: 1;
         height: 85px;
         padding-top: 28px;
-        margin-left: 60px;
+        margin-left: 40px;
     }
 
     .nav>.nav-btn>label {
