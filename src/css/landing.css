@@ -128,7 +128,7 @@
     .img-landing-container {
         z-index: 1;
         margin: -20rem 0 0 0;
-        width: 100%;
+        width: 95%;
         height: 40rem;
         display: flex;
         justify-content: flex-end;
@@ -204,6 +204,9 @@
     }
     .img-landing-container {
         margin: -20rem 0 0 0;
+    }
+    .card-numbers-information {
+        width: 75vw;
     }
     .offerings {
         padding: 0 0.1rem !important;
