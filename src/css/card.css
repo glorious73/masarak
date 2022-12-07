@@ -31,7 +31,7 @@
     justify-content: stretch;
     align-items: stretch;
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
 }
 .card-login-logo {
     flex-grow: 1;
@@ -43,7 +43,7 @@
     padding-bottom: 1.5rem;
 }
 .card-login-form {
-    flex-grow: 4;
+    flex-grow: 1;
     background-color: var(--primary-color);
     color: var(--text-color);
 }
