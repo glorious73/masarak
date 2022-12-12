@@ -13,7 +13,7 @@ function markupTemplate() {
                 <h1 class="title text-white">مسارك</h2>
                 <h2 class="text-white word-wrap-landing">منصة لتيسير عملية ايجاد التخصص الجامعي المناسب لطلاب وخريجي الثانوية والتأكد من رغبتهم في بناء مستقبل بذلك المجال.</h2>
                 <div class="mt-4 mx-2">
-                    <a onclick="history.pushState(null, document.title, '/signup')" class="hyperlink active">سجل الآن</a>
+                    <a onclick="history.pushState({}, '', '/signup')" class="hyperlink active">سجل الآن</a>
                 </div>
             </div>
             <div class="img-landing-container">

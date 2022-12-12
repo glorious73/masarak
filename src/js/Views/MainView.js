@@ -38,7 +38,7 @@ this.shadowRoot.appendChild(template.content.cloneNode(true));
             (evt) => new AuthService().logoutUnauthorizedUser(evt));
         document.addEventListener("ForbiddenEvent", (evt) => {
             new AuthService().notifyForbiddenUser(evt);
-            setTimeout(() => history.pushState(null, document.title, '/'), 1200);
+            setTimeout(() => history.pushState({}, '', '/'), 1200);
         });
         // Views
         document.addEventListener("toggleUIForUser", evt => {
@@ -53,7 +53,7 @@ this.shadowRoot.appendChild(template.content.cloneNode(true));
             (evt) => new AuthService().logoutUnauthorizedUser(evt));
         document.removeEventListener("ForbiddenEvent", (evt) => {
             new AuthService().notifyForbiddenUser(evt);
-            setTimeout(() => history.pushState(null, document.title, '/'), 1200);
+            setTimeout(() => history.pushState({}, '', '/'), 1200);
         });
         // Views
         document.removeEventListener("toggleUIForUser", evt => {

@@ -34,7 +34,7 @@ template.innerHTML = /*html*/`
                 </div>
             </form>
             <div class="mt-2 d-flex flex-row justify-content-center">
-                <a class="auth-link" onclick="history.pushState(null, document.title, '/password/forgot')">نسيت كلمة السر؟</a>
+                <a class="auth-link" onclick="history.pushState({}, '', '/password/forgot')">نسيت كلمة السر؟</a>
             </div>
         </div>
     </div>
@@ -79,7 +79,7 @@ export default class LoginComponent extends HTMLElement {
                     data: "logged in"
                 }
             }));
-            history.pushState(null, document.title, '/questions');
+            history.pushState({}, '', '/questions');
         }
         catch(err) {
             this.alertService.showAlert("Error", err.message);

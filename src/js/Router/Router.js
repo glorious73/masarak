@@ -50,6 +50,6 @@ export default class Router {
     }
 
     removeHash() { 
-        history.pushState("", document.title, window.location.pathname + window.location.search);
+        history.pushState("", '', window.location.pathname + window.location.search);
     }
 }

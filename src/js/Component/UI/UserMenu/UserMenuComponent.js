@@ -49,7 +49,7 @@ this.shadowRoot.appendChild(template.content.cloneNode(true));
         this.isToggled = false;
         // Profile
         const btnprofile = this.shadowRoot.querySelector("#profile");
-        btnprofile.addEventListener('click', (evt) => history.pushState(null, document.title, '/user/profile'));
+        btnprofile.addEventListener('click', (evt) => history.pushState({}, '', '/user/profile'));
         // Logout
         const btnlogout = this.shadowRoot.querySelector("#logout");
         btnlogout.addEventListener('click', (evt) => this.logout(evt));

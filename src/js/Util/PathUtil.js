@@ -10,7 +10,7 @@ export default class PathUtil {
         const id = path.substring(path.lastIndexOf('/')+1);
         if(!id) {
             this.alertService.showAlert('Error', 'There is no Id.');
-            setTimeout(() => history.pushState(null, document.title, '/'), 2000);
+            setTimeout(() => history.pushState({}, '', '/'), 2000);
         }
         return id;
     }

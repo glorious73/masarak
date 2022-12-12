@@ -31,7 +31,7 @@ template.innerHTML = /*html*/`
                 </div>
             </form> 
             <div class="mt-2 d-flex flex-row justify-content-center">
-                <a class="auth-link" onclick="history.pushState(null, document.title, '/login')">تسجيل الدخول</a>
+                <a class="auth-link" onclick="history.pushState({}, '', '/login')">تسجيل الدخول</a>
             </div>
         </div>  
     </div>
@@ -66,7 +66,7 @@ export default class ForgotPasswordComponent extends HTMLElement {
         try {
             const result = await setTimeout(2000, () => console.log("emulate forgot password email."));
             this.alertService.showAlert("اشعار", "تم ارسال بريد الكتروني لك.");
-            setTimeout(() => history.pushState(null, document.title, '/login'), 1000);
+            setTimeout(() => history.pushState({}, '', '/login'), 1000);
         }
         catch(err) {
             this.alertService.showAlert("Error", err.message);

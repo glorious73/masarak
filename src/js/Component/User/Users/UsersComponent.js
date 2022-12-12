@@ -25,7 +25,7 @@ template.innerHTML = /*html*/`
                     </app-svg-icon>
                     Export
                 </a>
-                <a class="btn-action btn-action-secondary" onclick="history.pushState(null, document.title, '/user/form')">
+                <a class="btn-action btn-action-secondary" onclick="history.pushState({}, '', '/user/form')">
                     <app-svg-icon data-icon="person-plus" data-class="icon-action">
                     </app-svg-icon>
                     Add

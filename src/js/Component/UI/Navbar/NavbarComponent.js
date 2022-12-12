@@ -26,18 +26,18 @@ function markupTemplate() {
                     </label>
                 </div>
                 <div class="nav-items">
-                    <a onclick="history.pushState(null, document.title, '/')">الصفحة الرئيسية</a>
-                    <a onclick="history.pushState(null, document.title, '/faqs')">الأسئلة الشائعة</a>
-                    <a onclick="history.pushState(null, document.title, '/contactus')">تواصل معنا</a>
-                    <a onclick="history.pushState(null, document.title, '/signup')" class="hyperlink-nav-hide" id="btnRegisterActiveSmall">التسجيل
+                    <a onclick="history.pushState({}, '', '/')">الصفحة الرئيسية</a>
+                    <a onclick="history.pushState({}, '', '/faqs')">الأسئلة الشائعة</a>
+                    <a onclick="history.pushState({}, '', '/contactus')">تواصل معنا</a>
+                    <a onclick="history.pushState({}, '', '/signup')" class="hyperlink-nav-hide" id="btnRegisterActiveSmall">التسجيل
                     </a>
-                    <a onclick="history.pushState(null, document.title, '/login')" class="hyperlink-nav-hide" id="btnRegisterPrimarySmall">تسجيل الدخول
+                    <a onclick="history.pushState({}, '', '/login')" class="hyperlink-nav-hide" id="btnRegisterPrimarySmall">تسجيل الدخول
                     </a>
                     <input type="checkbox" id="nav-dropdown">
                 </div>
                 <div class="nav-registration">
-                    <a onclick="history.pushState(null, document.title, '/signup')" class="hyperlink active" id="btnRegisterActive">التسجيل</a>
-                    <a onclick="history.pushState(null, document.title, '/login')" class="hyperlink primary" id="btnRegisterPrimary">تسجيل الدخول
+                    <a onclick="history.pushState({}, '', '/signup')" class="hyperlink active" id="btnRegisterActive">التسجيل</a>
+                    <a onclick="history.pushState({}, '', '/login')" class="hyperlink primary" id="btnRegisterPrimary">تسجيل الدخول
                     </a>
                 </div>
             </div>
@@ -85,9 +85,9 @@ export default class NavbarComponent extends HTMLElement {
         const btnPrimarySmall = this.shadowRoot.querySelector("#btnRegisterPrimarySmall");
         if(state == 'logged in') {            
             btnActive.innerHTML = 'الملف الشخصي';
-            btnActive.addEventListener("click", (e) =>  history.pushState(null, document.title, '/profile'));
+            btnActive.addEventListener("click", (e) =>  history.pushState({}, '', '/profile'));
             btnActiveSmall.innerHTML = 'الملف الشخصي';
-            btnActiveSmall.addEventListener("click", (e) =>  history.pushState(null, document.title, '/profile'));
+            btnActiveSmall.addEventListener("click", (e) =>  history.pushState({}, '', '/profile'));
             btnPrimary.innerHTML = 'تسجيل الخروج';
             btnPrimary.addEventListener("click", (e) =>  this.logout());
             btnPrimarySmall.innerHTML = 'تسجيل الخروج';
@@ -95,14 +95,14 @@ export default class NavbarComponent extends HTMLElement {
         }
         else {
             btnActive.innerHTML = 'التسجيل';
-            btnActive.addEventListener("click", (e) =>  history.pushState(null, document.title, '/signup'));
+            btnActive.addEventListener("click", (e) =>  history.pushState({}, '', '/signup'));
             btnActiveSmall.innerHTML = 'التسجيل';
-            btnActiveSmall.addEventListener("click", (e) =>  history.pushState(null, document.title, '/signup'));
+            btnActiveSmall.addEventListener("click", (e) =>  history.pushState({}, '', '/signup'));
             btnPrimary.innerHTML = 'تسجيل الدخول';
-            btnPrimary.addEventListener("click", (e) =>  history.pushState(null, document.title, '/login'));
+            btnPrimary.addEventListener("click", (e) =>  history.pushState({}, '', '/login'));
             btnPrimary.removeEventListener('click', (e) => this.logout());
             btnPrimarySmall.innerHTML = 'تسجيل الدخول';
-            btnPrimarySmall.addEventListener("click", (e) =>  history.pushState(null, document.title, '/login'));
+            btnPrimarySmall.addEventListener("click", (e) =>  history.pushState({}, '', '/login'));
             btnPrimarySmall.removeEventListener('click', (e) => this.logout());
         }
     }
@@ -113,6 +113,6 @@ export default class NavbarComponent extends HTMLElement {
                 data: "logged out"
             }
         }));
-        history.pushState(null, document.title, '/');
+        history.pushState({}, '', '/');
     }
 }
