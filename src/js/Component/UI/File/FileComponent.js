@@ -1,4 +1,4 @@
-
+import 'element-internals-polyfill';
 import FileService from "../../../Service/File/FileService";
 
 function markupTemplate() {

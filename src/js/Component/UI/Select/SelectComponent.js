@@ -1,4 +1,4 @@
-
+import 'element-internals-polyfill';
 
 function markupTemplate() {
     const template = document.createElement('template');
