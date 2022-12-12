@@ -32,5 +32,8 @@
   "devDependencies": {
     "parcel": "^2.8.0",
     "parcel-reporter-static-files-copy": "^1.4.0"
+  },
+  "dependencies": {
+    "element-internals-polyfill": "^1.1.17"
   }
 }
