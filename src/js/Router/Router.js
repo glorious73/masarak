@@ -40,7 +40,6 @@ export default class Router {
         const route = this.routes.find(route => {
             return pathname.match(new RegExp(route.path));
         });
-        console.log(`pathname: ${pathname}. route: ${JSON.stringify(route)}`);
         if(route) {
             // show component
             this.app.showComponent(route);
