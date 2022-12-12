@@ -86,7 +86,7 @@ this.shadowRoot.appendChild(template.content.cloneNode(true));
             // to add select value
             const { user } = await this.crudService.addItem('/api/account', e.target);
             this.alertService.showAlert("Success", `${user.firstName} ${user.lastName} was added successfully.`);
-            window.location = Routes.Users.path;
+            history.pushState(null, document.title, Routes.Users.path);
         }
         catch(err) {
            this.alertService.showAlert("Error", err.message);

@@ -108,7 +108,7 @@ this.shadowRoot.appendChild(template.content.cloneNode(true));
         try {
             const { user } = await this.crudService.editItem('/api/account', this.id, e.target);
             this.alertService.showAlert("Success", `${user.firstName} ${user.lastName} was edited successfully.`);
-            window.location = Routes.Users.path;
+            history.pushState(null, document.title, Routes.Users.path);
         }
         catch(err) {
            this.alertService.showAlert("Error", err.message);

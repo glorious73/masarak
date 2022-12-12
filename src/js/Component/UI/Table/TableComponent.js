@@ -159,13 +159,13 @@ this.shadowRoot.appendChild(template.content.cloneNode(true));
     viewItem(evt) {
         const viewLink  = this.getAttribute('data-view-path');
         const id        = evt.target.id.split("-")[1] || evt.target.parentElement.id.split("-")[1];
-        window.location = `${viewLink}/${id}`;
+        history.pushState(null, document.title, `/${viewLink}/${id}`);
     }
 
     editItem(evt) {
         const editLink = this.getAttribute('data-edit-path');
         const id       = evt.target.id.split("-")[1] || evt.target.parentElement.id.split("-")[1];
-        window.location = `${editLink}/${id}`;
+        history.pushState(null, document.title, `${editLink}/${id}`);
     }
 
     deleteItem(evt) {

@@ -36,7 +36,7 @@ template.innerHTML = /*html*/`
                 </div>
             </form>
             <div class="mt-2 d-flex flex-row justify-content-center">
-                <a class="auth-link" href="#/login">تسجيل الدخول</a>
+                <a class="auth-link" onclick="history.pushState(null, document.title, '/login')">تسجيل الدخول</a>
             </div>
         </div>  
     </div>
@@ -75,7 +75,7 @@ this.shadowRoot.appendChild(template.content.cloneNode(true));
         const token = (query) ? query.split("=")[1] : null;
         if(!token) {
             this.alertService.showAlert('Error', 'There is no user token.');
-            setTimeout(() => window.location = '', 2000);
+            setTimeout(() => history.pushState(null, document.title, '/'), 2000);
         }
         this.shadowRoot.querySelector('#token').value = token;
     }
@@ -86,7 +86,7 @@ this.shadowRoot.appendChild(template.content.cloneNode(true));
         try {
             const result = await passwordService.resetPassword(e.target);
             this.alertService.showAlert("Information", result.message);
-            setTimeout(() => window.location = Routes.Login.path, 1000);
+            setTimeout(() => history.pushState(null, document.title, '/login'), 1000);
         }
         catch(err) {
             this.alertService.showAlert("Error", err.message);

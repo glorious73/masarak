@@ -30,7 +30,7 @@ export default class AuthService {
 
     logout() {
         localStorage.clear();
-        window.location = '';
+        history.pushState(null, document.title, '/');
     }
 
     isLoggedIn() {

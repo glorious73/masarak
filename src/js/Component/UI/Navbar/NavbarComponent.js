@@ -26,18 +26,19 @@ function markupTemplate() {
                     </label>
                 </div>
                 <div class="nav-items">
-                    <a href="">الصفحة الرئيسية</a>
-                    <a href="#/faqs">الأسئلة الشائعة</a>
-                    <a href="#/contactus">تواصل معنا</a>
-                    <a href="#/signup" class="hyperlink-nav-hide" id="btnRegisterActiveSmall">التسجيل
+                    <a onclick="history.pushState(null, document.title, '/')">الصفحة الرئيسية</a>
+                    <a onclick="history.pushState(null, document.title, '/faqs')">الأسئلة الشائعة</a>
+                    <a onclick="history.pushState(null, document.title, '/contactus')">تواصل معنا</a>
+                    <a onclick="history.pushState(null, document.title, '/signup')" class="hyperlink-nav-hide" id="btnRegisterActiveSmall">التسجيل
                     </a>
-                    <a href="#/login" class="hyperlink-nav-hide" id="btnRegisterPrimarySmall">تسجيل الدخول
+                    <a onclick="history.pushState(null, document.title, '/login')" class="hyperlink-nav-hide" id="btnRegisterPrimarySmall">تسجيل الدخول
                     </a>
                     <input type="checkbox" id="nav-dropdown">
                 </div>
                 <div class="nav-registration">
-                    <a href="#/signup" class="hyperlink active" id="btnRegisterActive">التسجيل</a>
-                    <a href="#/login" class="hyperlink primary" id="btnRegisterPrimary">تسجيل الدخول</a>
+                    <a onclick="history.pushState(null, document.title, '/signup')" class="hyperlink active" id="btnRegisterActive">التسجيل</a>
+                    <a onclick="history.pushState(null, document.title, '/login')" class="hyperlink primary" id="btnRegisterPrimary">تسجيل الدخول
+                    </a>
                 </div>
             </div>
         </header>
@@ -84,26 +85,24 @@ export default class NavbarComponent extends HTMLElement {
         const btnPrimarySmall = this.shadowRoot.querySelector("#btnRegisterPrimarySmall");
         if(state == 'logged in') {            
             btnActive.innerHTML = 'الملف الشخصي';
-            btnActive.setAttribute("href", '#/profile');
+            btnActive.addEventListener("click", (e) =>  history.pushState(null, document.title, '/profile'));
             btnActiveSmall.innerHTML = 'الملف الشخصي';
-            btnActiveSmall.setAttribute("href", '#/profile');
+            btnActiveSmall.addEventListener("click", (e) =>  history.pushState(null, document.title, '/profile'));
             btnPrimary.innerHTML = 'تسجيل الخروج';
-            btnPrimary.setAttribute("href", '#');
-            btnPrimary.addEventListener('click', (e) => this.logout());
+            btnPrimary.addEventListener("click", (e) =>  this.logout());
             btnPrimarySmall.innerHTML = 'تسجيل الخروج';
-            btnPrimarySmall.setAttribute("href", '#');
-            btnPrimarySmall.addEventListener('click', (e) => this.logout());
+            btnPrimarySmall.addEventListener("click", (e) =>   this.logout());
         }
         else {
             btnActive.innerHTML = 'التسجيل';
-            btnActive.setAttribute("href", '#/signup');
+            btnActive.addEventListener("click", (e) =>  history.pushState(null, document.title, '/signup'));
             btnActiveSmall.innerHTML = 'التسجيل';
-            btnActiveSmall.setAttribute("href", '#/signup');
+            btnActiveSmall.addEventListener("click", (e) =>  history.pushState(null, document.title, '/signup'));
             btnPrimary.innerHTML = 'تسجيل الدخول';
-            btnPrimary.setAttribute("href", '#/login');
+            btnPrimary.addEventListener("click", (e) =>  history.pushState(null, document.title, '/login'));
             btnPrimary.removeEventListener('click', (e) => this.logout());
             btnPrimarySmall.innerHTML = 'تسجيل الدخول';
-            btnPrimarySmall.setAttribute("href", '#/login');
+            btnPrimarySmall.addEventListener("click", (e) =>  history.pushState(null, document.title, '/login'));
             btnPrimarySmall.removeEventListener('click', (e) => this.logout());
         }
     }
@@ -114,6 +113,6 @@ export default class NavbarComponent extends HTMLElement {
                 data: "logged out"
             }
         }));
-        window.location.reload();
+        history.pushState(null, document.title, '/');
     }
 }

@@ -14,7 +14,7 @@ import Components from './Components';
 class Index {
     constructor() {
         this.app        = new App("#app");
-        this.router     = new Router(this.app);
+        this.router     = new Router(this.app, "path");
         this.components = new Components();
         this.uiService  = new UIService();
     }
@@ -38,30 +38,30 @@ class Index {
         window.GlobalVariables.styles = styles;
     }
 
+    loadHistoryState() {
+        window.history.pushState = new Proxy(window.history.pushState, {
+            apply: (target, thisArg, argArray) => {
+                const output = target.apply(thisArg, argArray);
+                document.dispatchEvent(new CustomEvent("pushStateEvent"));
+                return output;
+            },
+          });
+    }
+
     async load() {
         await this.loadIcons();
         await this.loadCss();
+        this.loadHistoryState();
         this.components.defineComponents();
         const user     = localStorage.getItem("user");
-        const { hash } = window.location;
-        if(!user) {
-            this.uiService.toggleUIForUser(false);
-            if(hash.match(new RegExp(Routes.ResetPassword.pathRegex)))
-                this.app.instantiateApp(Routes.ResetPassword);
-            else {
-                this.router.removeHash();
-                this.app.instantiateApp(Routes.Landing);
-            }
-        }
-        else {
-            this.uiService.toggleUIForUser(true);
-            // Route
-            Object.entries(Routes).forEach((route) => {
-                const [name, props] = route;
-                if(hash.match(new RegExp(props.pathRegex)))
-                    this.app.instantiateApp(props);
-            });
-        }
+        const { pathname } = window.location;
+        this.uiService.toggleUIForUser(true);
+        // Route
+        Object.entries(Routes).forEach((route) => {
+            const [name, props] = route;
+            if(pathname.match(new RegExp(props.pathRegex)))
+                this.app.instantiateApp(props);
+        });
     }
 
     addComponents() {

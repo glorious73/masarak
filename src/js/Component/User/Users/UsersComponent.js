@@ -22,18 +22,18 @@ template.innerHTML = /*html*/`
             <div class="ui-table-header-item ui-table-header-actions">
                 <a class="btn-action btn-action-primary" id="btnExport">
                     <app-svg-icon data-icon="file-spreadsheet-fill" data-class="icon-action icon-action-fill">
-</app-svg-icon>
+                    </app-svg-icon>
                     Export
                 </a>
-                <a class="btn-action btn-action-secondary" href="#/user/form">
+                <a class="btn-action btn-action-secondary" onclick="history.pushState(null, document.title, '/user/form')">
                     <app-svg-icon data-icon="person-plus" data-class="icon-action">
-</app-svg-icon>
+                    </app-svg-icon>
                     Add
                 </a>
             </div>
         </div>
         <!-- Table -->
-        <app-table class="mt-1 mb-3" data-theme="secondary" data-event="usersLoadedEvent" data-update-event="usersUpdatedEvent" data-actions="edit,delete" data-item-name="User" data-api-endpoint="/api/account" data-response-result="user" data-response-message="message" data-edit-path="#/user/edit" data-delete-reload="true"></app-table>
+        <app-table class="mt-1 mb-3" data-theme="secondary" data-event="usersLoadedEvent" data-update-event="usersUpdatedEvent" data-actions="edit,delete" data-item-name="User" data-api-endpoint="/api/account" data-response-result="user" data-response-message="message" data-edit-path="/user/edit" data-delete-reload="true"></app-table>
         <!-- Pagination -->
         <app-pagination data-theme="secondary" data-api-endpoint="/api/user" data-api-result="users" data-event="userPagesEvent" data-update-event="usersUpdatedEvent">
         </app-pagination>

@@ -34,7 +34,7 @@ export default class SelectComponent extends HTMLElement {
         // Select Component
         this.attachShadow({ mode: 'open' });
         const template = markupTemplate();
-this.shadowRoot.appendChild(template.content.cloneNode(true));
+    this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
 
     get value() { return this.value_; }

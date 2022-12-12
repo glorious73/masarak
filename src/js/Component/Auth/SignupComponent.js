@@ -130,7 +130,7 @@ export default class SignupComponent extends HTMLElement {
             const user = await setTimeout(2000, () => console.log("emulate sign up"));
             this.alertService.showAlert("تم", "تم تسجيلك بنجاح");
             // Reload w/ new user
-            window.location.href = '#/login';
+            history.pushState(null, document.title, '/login');
         }
         catch(err) {
             this.alertService.showAlert("Error", err.message);

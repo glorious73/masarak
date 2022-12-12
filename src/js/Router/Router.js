@@ -1,9 +1,15 @@
 export default class Router {
-    constructor(app) {
-        this.app    = app;
-        this.routes = [];
+    constructor(app, mode="hash") {
+        this.app        = app;
+        this.routes     = [];
         this.hashChange = this.hashChange.bind(this);
-        window.addEventListener("hashchange", this.hashChange);
+        this.popState   = this.popState.bind(this);
+        if(mode === "hash")
+          window.addEventListener("hashchange", this.hashChange);
+        else {
+            document.addEventListener("pushStateEvent", (e) => this.popState());
+            window.addEventListener("popstate", (e) => this.popState());
+        }
     }
 
     addRoute(name, path) {
@@ -20,6 +26,21 @@ export default class Router {
         const route = this.routes.find(route => {
             return hash.match(new RegExp(route.path));
         });
+        if(route) {
+            // show component
+            this.app.showComponent(route);
+            // scroll top
+            document.body.scrollTop = 0; // Safari
+            document.documentElement.scrollTop = 0; // Chrome, Firefox, IE and Opera
+        }
+    }
+
+    popState() {
+        const { pathname } = window.location;
+        const route = this.routes.find(route => {
+            return pathname.match(new RegExp(route.path));
+        });
+        console.log(`pathname: ${pathname}. route: ${JSON.stringify(route)}`);
         if(route) {
             // show component
             this.app.showComponent(route);
